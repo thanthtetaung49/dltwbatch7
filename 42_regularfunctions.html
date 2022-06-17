@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regular Function</title>
+
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        body{
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 300px;
+            background-color: rgba(245, 245, 245, 0.836);
+            padding: 10px;
+            box-shadow: 2px 2px 5px gray;
+        }
+
+        label {
+            display: block;
+            margin: 10px;
+        }
+
+        .form-control {
+            width: 100%;
+            display: block;
+            padding: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(15, 175, 238, 0.788);
+            border: none;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <h3>Show Name = <span id="replacement">Test</span></h3>
+
+        <!-- <form action=""> -->
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" class="form-control" autofocus autocomplete="off">
+
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" class="form-control">
+
+            <button type="button" class="btn" onclick="getdata()">Get Name</button>
+        <!-- </form> -->
+    </div>
+
+
+
+<script type =text/javascript>
+
+//    Function
+
+// function name () {
+//     code to be executed;
+// }
+//
+// name (); invoke/function call
+
+    // 1. Regular Function
+    //     (i) Manual Function
+    //     (ii) Parameter Function
+    //         (a) Single parameter function
+    //         (b) Multiple parameter function
+
+            // (i) Manual function
+
+function greeting() {
+
+    console.log("Hello Myanmar");
+    console.log("Hello Thailand");
+    console.log("Hello yangon");
+}
+
+greeting();
+
+function hello() {
+    console.log('hello thingangyun');
+}
+
+hello();
+
+function hello() {
+    console.log('hello N.oakalapa');
+}
+
+hello();
+
+function funone() {
+    console.log('I am function one');
+}
+
+function funtwo() {
+
+    funone();
+
+    console.log('I am function two');
+
+    funthree();
+}
+
+function funthree() {
+
+    funone();
+
+    console.log('I am function three');
+}
+
+funtwo();
+
+//--------------------------------------------
+
+// return
+function funfour() {
+    console.log(3);
+}
+
+function funfive() {
+    console.log(4);
+}
+
+function funsix() {
+    let funone = funfour();
+    let funtwo = funfive();
+
+    let total = funone + funtwo;
+    console.log(total); // NaN not a number
+}
+
+funsix();
+
+function funseven() {
+    return 7;
+}
+
+console.log(funseven());
+
+function funeight() {
+    let num = 8;
+    return num;
+}
+
+console.log(funeight());
+
+function funnine() {
+    let num1 = 1;
+    let num2 = 2;
+
+    console.log(num1,num2);
+
+    let total = num1 + num2;
+
+    console.log(total);
+}
+
+funnine();
+
+function ten() {
+    let num1 = 1;
+    let num2 = 2;
+    let num3 = 3;
+
+    let total = num1 + num2 + num3;
+
+    return "hee hee";
+}
+
+console.log(ten());
+
+// 2. parameter function (single)
+function myfun1(city) {
+    // console.log("Hello " + city);
+
+    console.log(`Hello ${city}`);
+}
+
+myfun1(); // hello undefined
+myfun1('Yangon');
+myfun1('Mandalay');
+myfun1(400);
+
+// default parameter
+function myfun2 (country="Myanmar") {
+    console.log(`My country is ${country}`);
+}
+
+myfun2('Thailand');
+myfun2('Philippines');
+myfun2();
+
+// multiple parameter function
+function multifun3(x,y,z) {
+    console.log(`x value is ${x}, y value is ${y} and z value is ${z}`);
+}
+
+multifun3(10);
+multifun3(20,30);
+// multifun3(20,30,40);
+multifun3(20,30,40);
+
+function multifun4(x,y,z) {
+    // let num1 = x;
+    // let num2 = y;
+    // let num3 = z;
+    //
+    // let total = num1 + num2 + num3;
+    // return total;
+
+    return x + y + z;
+
+    // error
+    // return const result = x + y + z;
+    // return let result = x + y + z;
+    // return var result = x + y + z;
+}
+
+console.log(multifun4(10)); // NaN
+console.log(multifun4(10,20,30)); // 60
+console.log(multifun4()); // Nan
+
+function multifun5(x=1,y=2,z=3) {
+
+    return x + y + z;
+}
+
+console.log(multifun5(10)); // 15
+console.log(multifun5()); // 6 (working default parameter)
+
+//------------------------------------------
+
+    // Constructor function(string structure)
+    // new Function("str1","str2","str3")
+
+    let confunone = new Function("j","k","l","return j+k+l");
+
+    console.log(confunone()); // NaN
+    console.log(confunone(10)); // NaN
+    console.log(confunone(20,10,10)); // 40
+
+    console.log(confunone("20","10","30")); // 201030
+
+//-----------------------------------------------------
+
+    // Nameless function => function()
+
+let namelessfunone = function(name,color) {
+    console.log(`My name is ${name} and I love ${color} color.`);
+}
+
+namelessfunone('Thant Htet Aung','blue');
+
+    // Self Invoking Function
+
+(function(){
+    console.log(`My name Aung Aung`);
+})();
+
+(function (){
+    console.log("i am self invoking function");
+})();
+
+(function (name,age,city) {
+    console.log(`My name is ${name}, Age is ${age} and I live in ${city}.`);
+    
+})("Thant Htet Aung",23,"Yangon");
+
+function getdata() {
+    // console.log('hay');
+
+    var firstname = document.getElementById('firstname').value;
+    var lastname = document.getElementById('lastname').value;
+    // console.log(firstname,lastname);
+
+    var getreplacename = document.getElementById('replacement');
+    // console.log(getreplacename);
+
+    // getreplacename.innerText = `${firstname} ${lastname}`;
+    // getreplacename.textContent = `${firstname} ${lastname}`;
+    getreplacename.innerHTML = `${firstname} ${lastname}`;
+
+    document.getElementById('firstname').value = "";
+    document.getElementById('lastname').value = "";
+
+    document.getElementById('firstname').focus();
+}
+
+
+ //-----------------------------------------------------------
+    // 2. Arrow Function
+    //     (i) Manual Function
+    //     (ii) Parameter Function
+    //         (a) Single parameter function
+    //         (b) Multiple parameter function -->
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statement</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    // <!--    Ternary Operator ( ? ) -->
+    // c1 > c2 ? true : false ;
+
+    let x = 100;
+    let y = 200;
+
+    console.log(x > y ? "Yes, x is greater than y" : "No, x is not greater than y");
+    console.log(x < y ? "Yes, x is less than y" : "No, x is less than y");
+
+    let num1 = 4; // number data type
+    let num2 = "4"; // string data type
+
+    // only checked value
+    document.write("equal to (==) result => " + (num1 == num2 ? "true" : "false") + "<br>");
+    // checked both value and data type
+    document.write("equal to (===) result => " + (num1 === num2 ? "true" : "false") + "<br>");
+    // only checked value
+    document.write("not equal to (!=) result => " + (num1 != num2 ? "true" : "false") + "<br>");
+    // checked both value and data type
+    document.write("not equal to (!==) result => " + (num1 !== num2 ? "true" : "false") + "<br>");
+
+    document.write("greater than (>) result => " + (num1 > num2 ? "true" : "false") + "<br>");
+    document.write("greater than equal (>=) result => " + (num1 >= num2 ? "true" : "false") + "<br>");
+
+    document.write("less than (<) result => " + (num1 < num2 ? "true" : "false") + "<br>");
+    document.write("less than equal (<=) result => " + (num1 <= num2 ? "true" : "false") + "<br>");
+
+    //    if statement
+    // if (condition) {
+    //     codes to be execute .....
+    // }
+
+    let id = 10;
+
+    if (id = 50) {
+        console.log("Correct ID");
+    }
+
+    id = "50";
+    if (id == 50) {
+        console.log("Correct ID");
+    } else {
+        console.log("Incorrect ID");
+    }
+
+    if (id === 50) {
+        console.log("Correct ID");
+    } else {
+        console.log("Incorrect ID");
+    }
+
+    if (id != 50) {
+        console.log("Correct ID");
+    } else {
+        console.log("Incorrect ID")
+    }
+
+    if (id !== 50) {
+        console.log("Correct ID");
+    } else {
+        console.log("Incorrect ID");
+    }
+
+    //    else if()
+    const i = 50;
+    const j = 100;
+
+    if (i > j) {
+        console.log("i is greater than j");
+    } else if (i == j) {
+        console.log("i is equal to j");
+    } else {
+        console.log("i is less than j");
+    }
+
+    // switch (condition) {
+    //     case :
+    //         code to be execute;
+    //         break;
+    //     case :
+    //         code to be execute;
+    //         break;
+    //     case :
+    //         code to be execute;
+    //         break;
+    //     default :
+    //         code to be execute;
+    //         break;
+    // }
+
+    const color = "pink";
+
+    switch (color) {
+        case "white" :
+            console.log("my fav color is not white");
+            break;
+            case "black" :
+                console.log("my fav color is not black");
+                break;
+                case "red" :
+                    console.log("i hate red color");
+                    break;
+                    case "violet" :
+                        console.log("i love violet color");
+                        break;
+                        default :
+                            console.log("Try again");
+                            break;
+    }
+
+    let daycount = new Date().getDay();
+
+    // Days start from index[0] / Sunday
+    // index 0 to 6
+    switch (daycount) {
+        case 0:
+            document.write("Today is Sunday");
+            console.log("Today is Sunday");
+            break;
+            case 1:
+                document.write("Today is Monday");
+                console.log("Today is Monday");
+                break;
+                case 2:
+                    document.write("Today is Tuesday");
+                    console.log("Today is Tuesday");
+                    break;
+                    case 3:
+                        document.write("Today is Wednesday");
+                        console.log("Today is Wednesday");
+                        break;
+                        case 4:
+                            document.write("Today is Thursday");
+                            console.log("Today is Thursday");
+                            break;
+                            case 5:
+                                document.write("Today is Friday");
+                                console.log("Today is Friday");
+                                break;
+                                // case 6:
+                                //     document.write("Today is Saturday");
+                                //     break;
+                                default:
+                                    document.write("Today is Saturday");
+                                    console.log("Today is Saturday");
+                                    break;
+    }
+
+    let p = 50;
+    let q = 10;
+
+    total = p + q;
+    console.log(total);
+
+    total = q + p;
+    console.log(total);
+
+    // p += q;
+    // console.log(p); // 60
+
+    // q -= p;
+    // console.log(q); // -40
+
+    // q *= p;
+    // console.log(q); // 500
+
+    // p /= q;
+    // console.log(p); // 5
+
+    p %= q;
+    console.log(p); // 0
+
+    const username = prompt("Enter username: ");
+    const password = prompt("Enter password: ");
+
+    console.log(typeof username);
+    console.log(typeof password);
+
+    if (username === "thanthtet" && password === "123") {
+        console.log("Welcome to my page");
+    }else{
+        console.log("username and password is not match.");
+    }
+
+    // if (username === "thanthtet" || password === "123") {
+    //     console.log("Welcome to my page");
+    // }else{
+    //     console.log("Wrong");
+    // }
+
+</script>
+
+</body>
+</html>

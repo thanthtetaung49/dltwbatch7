@@ -1,0 +1,103 @@
+.containerOne .circle1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red, 
+        yellow,
+        green,
+        aqua,
+        pink
+        );
+}
+
+.containerOne .circle2{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #eb4034, 
+        #eb9834,
+        #34eb92,
+        #34c6eb,
+        #eb349e
+        );
+}
+
+.containerOne .circle3{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        rgba(27,232,127,1.00), 
+        rgba(18,106,127,1.00),
+        rgba(233,231,127,1.00),
+        rgba(221,35,127,1.00),
+        rgba(24,235,240,1.00)
+        );
+}
+
+.containerOne .circle4{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red 40%, 
+        yellow 0% 70%,
+        green 0%
+        );
+}
+
+.containerTwo{
+    width: 600px;
+    height: 300px;
+    background-color: gray;
+
+    display: flex;
+    justify-content: center; /*horizonal center*/
+    align-items: center; /*vertical center*/
+
+    position: relative;
+}
+
+.containerTwo .c1{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: aqua;
+
+    position: absolute;
+    
+    z-index: 1;
+    
+}
+
+.containerTwo .c2{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    /* background-color: yellowgreen; */
+    background: conic-gradient(
+        red 20%,
+        green 0% 40%,
+        blue 0% 70%,
+        black 0% 80%,
+        pink 0%
+    );
+
+    position: absolute;
+}
+
+.containerpointer{
+
+}
+
+.pointer{
+    width: 300px;
+    height: 30px;
+
+    display: block;
+
+    background-color: violet;
+}
+

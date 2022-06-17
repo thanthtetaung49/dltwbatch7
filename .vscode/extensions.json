@@ -1,0 +1,21 @@
+{
+    "recommendations": [
+        "wscats.cors-browser",
+        "ritwickdey.liveserver",
+        "negokaz.live-server-preview",
+        "anbuselvanrocky.bootstrap5-vscode",
+        "techer.open-in-browser",
+        "coderfee.open-html-in-browser",
+        "peakchen90.open-html-in-browser",
+        "whtouche.vscode-js-console-utils",
+        "ahadcove.js-quick-console",
+        "xabikos.javascriptsnippets",
+        "zignd.html-css-class-completion",
+        "abusaidm.html-snippets",
+        "eamodio.gitlens",
+        "lizhizhuanshu.autolua-debugger",
+        "formulahendry.code-runner",
+        "dotcypress.console-log",
+        "ecmel.vscode-html-css"
+    ]
+}

@@ -1,0 +1,26 @@
+/* Pseudo Element */
+
+/* .paragraph::first-line{
+    color: aqua;
+    font-size: 30px;
+} */
+
+/* .paragraph::first-letter{
+    color: rebeccapurple;
+    font-size: 30px;
+} */
+
+/* .paragraph::selection{
+    color: black;
+    background-color: yellow;
+} */
+
+.paragraph::before{
+    content: "ABC";
+    font-size: 40px;
+}
+
+.paragraph::after{
+    content: "Hello";
+    font-size: 40px;
+}

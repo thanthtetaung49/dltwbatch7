@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <link rel="icon" href="./img/icon/icon1.png" type="image/png">
+    <link rel="stylesheet" href="./css/18_combinator.css" type="text/css">
+</head>
+<body>
+    <h4>Tags to Tags</h4>
+
+    <div>
+        <span>I am span Tag inside of div</span>
+    </div>
+    <div>
+        I am div tag outside of div
+    </div>
+    <span>I am span tag  outside of div</span>
+
+    <hr>
+
+    <h4>Multi Tag to Tag</h4>
+    <div>
+        <span>
+            <p>
+                I am p tag inside of div > span > p
+            </p>
+        </span>
+    </div>
+
+    <div>
+        <p>I am p tag inside of div div > p</p>
+    </div>
+
+    <span>
+        <p>I am p tag inside of span span > p</p>
+    </span>
+
+    <hr>
+
+    <h4>Tags to Class</h4>
+    <div>
+        <p class="address">I am p tag inside of div > p (address)</p>
+        <span>
+            <b class="address">
+                I am b tag inside of div > span > b(address)
+            </b>
+        </span>
+    </div>
+    <p class="address">
+        I am p tag outside of div > p(address)
+    </p>
+    <span>
+        <b class="address">
+            I am b tag outside of div > span > b(address)
+        </b>
+    </span>
+
+    <hr>
+
+    <h4>Multi Tags to Class</h4>
+    <div>
+        <p class="address">I am p tag inside of div > p (address)</p>
+        <span>
+            <b class="address">
+                I am b tag inside of div > span > b(address)
+            </b>
+        </span>
+    </div>
+    <p class="address">
+        I am p tag outside of div > p(address)
+    </p>
+    <span>
+        <b class="address">
+            I am b tag outside of div > span > b(address)
+        </b>
+    </span>
+
+    <hr>
+
+    <h4>Multi Tags to Same Class</h4>
+    <div>
+        <span>
+            <small class="name">I am small tag inside of div > span > small(name)</small>
+        </span>
+        <p class="name">I am p tag inside of div > p(name)</p>
+        <p>I am p tag inside of div > p</p>
+    </div>
+
+    <hr>
+
+    <h4>Class to Class</h4>
+    <div class="bank">
+        <b>I am b tag inside of div(bank)</b>
+        <br>
+        <span class="money">
+            <b class="currency">I am b tag inside of div(bank) > span(money) > b(currency)</b>
+        </span>
+    </div>
+
+    <hr>
+
+    <h4>MultiClass to Class</h4>
+    <div class="bank">
+        <b>I am b tag inside of div(bank)</b>
+        <br>
+        <span class="money">
+            <b class="currency">I am b tag inside of div(bank) > span(money) > b(currency)</b>
+        </span>
+    </div>
+
+    <hr>
+
+    <h4>Class to Tag</h4>
+    <div class="container">
+        <p>I am p tag inside of div(container)</p>
+        <b>I am b tag inside of div(container)</b>
+    </div>
+
+    <hr>
+
+    <h4>Class to Tag</h4>
+    <div class="container">
+        <p>I am p tag inside of div(container)</p>
+        <b>
+            <span>
+                I am span tag inside of div(container) > b > span
+            </span>
+    </div>
+
+    <hr>
+
+    <h4>Class to Multi Tags</h4>
+    <div class="container">
+        <p>I am p tag inside of div(container) > p</p>
+        <b>
+            <span>I am span tag inside of div(container) > b > span</span>
+        </b>
+    </div>
+
+    <hr>
+
+    <h4>Same Class</h4>
+    <div>
+        <ul>
+            <li class="mobile">Sony</li>
+            <li class="mobile">Mi</li>
+            <li class="mobile">I Phone</li>
+        </ul>
+    </div>
+
+    <h4>Class to Tag by group selector</h4>
+
+    <div class="div1">
+        <p>I am p tag inside of div(div1) > p</p>
+        <b>I am b tag inside of div(div1) > b</b>
+    </div>
+
+    <hr>
+
+    <h4>Child selector</h4>
+
+    <div class="div1">
+        <b>I am b tag inside of div(div1) > b1</b>
+        <p>I am p tag inside of div(div1) > p1</p>
+        <i>I am i tag inside of div(div1) > i1</i>
+        
+        <div class="div2">
+            <b>I am b tag inside of div(div2) > b2</b>
+            <p>I am p tag inside of div(div2) > p2</p>
+            <i>I am i tag inside of div(div2) > i2</i>
+        </div>
+
+        <p>I am p tag inside of div(div1) > p3</p>
+    </div>
+
+    <b>I am b tag outside of div(div1) > b3</b>
+    <p>I am p tag outside of div(div1) > p3</p>
+    <i>I am i tag outside of div(div1) > i3</i>
+
+    <hr>
+
+    <h4>General Sibling Selector</h4>
+
+    <div class="div3">
+        <b>I am b tag inside of div(div3) > b1</b>
+        <p>I am p tag inside of div(div3) > p1</p>
+        <i>I am i tag inside of div(div3) > i1</i>
+        
+        <div class="div4">
+            <b>I am b tag inside of div(div4) > b2</b>
+            <p>I am p tag inside of div(div4) > p2</p>
+            <i>I am i tag inside of div(div4) > i2</i>
+        </div>
+
+        <b>I am b tag inside of div(div3) > b3</b>
+        <p>I am p tag inside of div(div3) > p3</p>
+        <i>I am i tag inside of div(div3) > i3</i>
+    </div>
+
+    <div class="div5">
+        <b>I am b tag outside of div(div3) > inside of div(div5) > b4</b>
+        <p>I am p tag outside of div(div3) > inside of div(div5) > p4</p>
+        <i>I am i tag outside of div(div3) > inside of div(div5) > i4</i>
+    </div>
+
+    <b>I am b tag outside of div(div3/div5) > b5</b>
+    <p>I am p tag outside of div(div3/div5) > p5</p>
+    <i>I am i tag outside of div(div3/div5) > i5</i>
+
+    <br>
+
+    <b>I am b tag outside of div(div3/div5) > b6</b>
+    <p>I am p tag outside of div(div3/div5) > p6</p>
+    <i>I am i tag outside of div(div3/div5) > i6</i>
+
+    <hr>
+
+    <h4>Adjecent Sibling Selector</h4>
+
+    <div class="div6">
+        <b>I am b tag inside of div(div6) > b1</b>
+        <p>I am p tag inside of div(div6) > p1</p>
+        <i>I am i tag inside of div(div6) > i1</i>
+        
+        <div class="div7">
+            <b>I am b tag inside of div(div7) > b2</b>
+            <p>I am p tag inside of div(div7) > p2</p>
+            <i>I am i tag inside of div(div7) > i2</i>
+        </div>
+
+        <b>I am b tag inside of div(div6) > b3</b>
+        <p>I am p tag inside of div(div6) > p3</p>
+        <i>I am i tag inside of div(div6) > i3</i>
+    </div>
+
+    <p>I am p tag outside of div(div6)</p>
+
+    <div class="div8">
+        <b>I am b tag outside of div(div6) > inside of div(div8) > b4</b>
+        <p>I am p tag outside of div(div6) > inside of div(div8) > p4</p>
+        <i>I am i tag outside of div(div6) > inside of div(div8) > i4</i>
+    </div>
+
+    <b>I am b tag outside of div(div6/div8) > b5</b>
+    <p>I am p tag outside of div(div6/div8) > p5</p>
+    <i>I am i tag outside of div(div6/div) > i5</i>
+
+    <br>
+
+    <b>I am b tag outside of div(div6/div8) > b6</b>
+    <p>I am p tag outside of div(div6/div8) > p6</p>
+    <i>I am i tag outside of div(div6/div8) > i6</i>
+    
+</body>
+</html>

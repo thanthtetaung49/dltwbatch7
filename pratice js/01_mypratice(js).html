@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <style type="text/css">
+
+        button {
+            padding: 10px 15px;
+            margin: 30px 10px;
+            background-color: darkviolet;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 5px 10px lightslategray;
+        }
+
+        button:active {
+            background-color: #0f3fdb;
+            transform: translateY(10px);
+            box-shadow: 0 3px 10px darkgrey;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="myheading1">Hello JavaScript</h1>
+    <h1 id="myheading2">Hello Python</h1>
+    <h1 id="myheading3">Hello HTML</h1>
+    <button onclick="document.getElementById('myheading1').innerText = 'Welcome to javascript'" type="button">
+        Click Me 1
+    </button>
+    <button onclick="document.getElementById('myheading2').textContent= 'Welcome to python'" type="button">
+        Click Me 2
+    </button>
+    <button onclick="document.getElementById('myheading3').innerHTML= '<i>Welcome to HTML</i>'" type="button">
+        Click Me 3
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    // window.alert("Hello World");
+
+    // alert("Hello JavaScript");
+
+    // let myname = prompt("Enter your name: ");
+    // console.log(myname);
+
+    let firstname = "Maung Maung";
+    let lastname = "Kyaw";
+
+    console.log(firstname + '' + lastname);
+    console.log(firstname, lastname);
+    console.log(`Student Name: ${firstname} ${lastname}`);
+
+    document.write(`Student Name is ${firstname} ${lastname}`);
+
+    let mylet;
+    var myvar;
+    // const myconst; // error
+
+    console.log(mylet, myvar);
+    console.log(`Datatype is ${typeof true}`); // boolean
+    console.log(`Datatype is ${typeof false}`); // boolean
+    console.log('Datatype is' + ' ' + (typeof "My Name")); // string
+    console.log(`Datatype is ${typeof 20}`); // number
+
+    let specharone = "i am a special escape \"character\"";
+    let spechartwo = 'I am a special escape \'character\' too';
+    console.log(specharone, ' ', spechartwo);
+
+    // document.getElementById("myheading1").textContent = "Hello Python";
+    // document.getElementById("myheading1").innerText = "Hello from our website";
+    // document.getElementById("myheading1").innerHTML = "<u>Hello from HTML</u>"; // can write HTML TAG
+
+    //	----------------------------------------------------------------------------------------------------------
+
+    let today = new Date();
+    // // let today = new Date('10-26-2020');
+    console.log(today);
+    //
+    // let mydate = today.getDate();
+    // console.log(mydate); // 26
+    //
+    // let mysecs = today.getSeconds();
+    // console.log(mysecs);
+    //
+    // let mymins = today.getMinutes();
+    // console.log(mymins);
+    //
+    // let myhours = today.getHours();
+    // console.log(myhours);
+    //
+    // let myday = today.getDay();
+    // console.log(myday);
+    //
+    // let mymonths = today.getMonth();
+    // console.log(mymonths);
+    //
+    // let myyear = today.getUTCFullYear();
+    // console.log(myyear);
+
+    // let mytime = today.getTime()
+    let mytime = Date.now();
+    console.log(mytime);
+
+    //	---------------------------------------------------------------
+
+    // round , floor , ceil , sqrt , abs ,pow(base,power) , max ,min, random
+    let number1 = 1.4;
+    let myround = Math.round(number1); // .5 or greater than .5 => increase 1
+
+    console.log(myround);
+
+    let number2 = 1.0;
+    let myceil = Math.ceil(number2); // greater than .0 => increase 1
+
+    console.log(myceil);
+
+    let number3 = 1.9;
+    let myfloor = Math.floor(number3); // always decrease 1
+
+    console.log(myfloor);
+
+    let number4 = 4;
+    let mysquare = Math.sqrt(number4); // square root value
+
+    console.log(mysquare);
+
+    let power = 4;
+    let base = 2;
+    let mypow = Math.pow(base, power); // power value => need base and power
+
+    console.log(mypow);
+
+    let abso = -199;
+    let myabso = Math.abs(abso); // absolute value
+
+    console.log(myabso);
+
+    let min = Math.min(2, 3, 44, 5, 8); // minimum value
+
+    console.log(min);
+
+    let max = Math.max(2, 3, 33, 4, 55, 789); // maximum value
+
+    console.log(max);
+
+    let random = Math.random() * 100;
+    let finalrandom = Math.random() * 1000;
+    let flowrandom = Math.floor(finalrandom);
+
+    console.log(random, finalrandom, flowrandom);
+
+    //	--------------------------------------------------------
+
+    // 7 typeof arithmetic operator => + - * / % ++ --
+
+    let val1 = 2;
+    let val2 = 3;
+
+    console.log(`Adding value ${val1 + val2}`);
+    console.log(`Subtraction value ${val1 - val2}`);
+    console.log(`Multiplication value ${val1 * val2}`);
+    console.log(`Division value ${val1 / val2}`);
+    console.log(`Reminder value ${val1 % val2}`);
+
+    // before
+    console.log(`before increment ${++val1}`); // 3
+    console.log(`before increment ${++val1}`); // 4
+    // after
+    console.log(`after increment ${val1++}`); // 4 // 4 + 1
+    console.log(`after increment ${val1++}`); // 5 // 5 + 1
+    console.log(`after increment ${val1++}`); // 6 // 6 + 1
+
+    // DataType
+    let str = "I am string data type"; // string
+    let num = 11; // number
+    let boltru = true; // boolean
+    let bolfalse = false; // boolean
+    let mynull = null; // object
+    let myunde = undefined; // undefined
+    let mydate = new Date(); // object
+    let jsobj = {
+        fistname: "Maung Maung", // object
+        lastname: "Kyaw",
+        age: 23,
+        city: "yangon"
+    }
+    let arys = ["cat", "dog", "horse", "lion", "bird"]; // object
+
+    console.log(`${typeof str} ${typeof num} ${typeof boltru} ${typeof bolfalse} ${typeof mynull} ${typeof myunde} ${typeof mydate} ${typeof jsobj} ${typeof arys}`);
+
+    // change to string
+    // method 1 String()
+    console.log(`${typeof String(str)} ${typeof String(num)} ${typeof String(boltru)} ${typeof String(bolfalse)} ${typeof String(mynull)} ${typeof String(myunde)} ${typeof String(mydate)} ${typeof String(jsobj)} ${typeof String(arys)}`);
+
+    // method 2 toString()
+    console.log(`${typeof str.toString()} ${typeof num.toString()} ${typeof boltru.toString()} ${typeof bolfalse.toString()} ${typeof mydate.toString()} ${typeof jsobj.toString()} ${typeof arys.toString()}`);
+
+    // change string to number
+    // let mystring = "I am a string";
+    // // let chgnumber = Number(mystring); // method 1
+    // let chgnumber = +mystring; // method 2
+    //
+    // console.log(chgnumber); // NaN
+    // console.log(typeof chgnumber); // number
+
+    // let mynumstr = "2";
+    // let chgnumber = Number(mynumstr);
+    //
+    // console.log(chgnumber);
+    // console.log(typeof chgnumber);
+
+    // change array to number
+    // let fruits = ["mango","orange","banana","apple","pineapple"];
+    // // let chgnumber = Number(fruits);
+    // let chgnumber = +fruits;
+    //
+    //
+    // console.log(fruits,chgnumber); // NaN
+    // console.log(typeof fruits,typeof chgnumber);
+
+    // .tofixed()
+    let fixnum = 2.22222222;
+    let myfix = fixnum.toFixed(2); // fixed the decimal value
+
+    console.log(myfix, typeof myfix); // string data type
+
+    // parse INT()
+    let intnum = 2.3333333;
+    let myint = parseInt(intnum);
+
+    console.log(myint, typeof myint); // number data type
+
+    // parse float()
+    let fltnum = 2.444444;
+    let myflt = parseFloat(fltnum);
+
+    console.log(myflt, typeof myflt); // number data type
+
+    // change bol to number
+
+    let chgbol = true;
+    // let bolnum = Number(chgbol);
+    let bolnum = +chgbol;
+
+    console.log(bolnum, typeof bolnum);
+    // change string to array
+    let strary = "I am string value now, but i will change string value soon";
+    let chgarys = Array.from(strary);
+    console.log(chgarys, typeof chgarys, Array.isArray(chgarys), strary.length);
+
+    // js objects
+    const jsobject = {
+        student1 : "maung maung",
+        student2 : "aung aung",
+        student3 : "su su"
+    }
+    console.log(jsobject);
+    console.log(jsobject.student1 + ' ' + jsobject.student2 + ' ' + jsobject.student3);
+
+    // arrays
+    const myarys = ["kyaw kyaw", 23, "yangon",];
+    console.log(myarys);
+    console.log(`${myarys[0]} ${myarys[1]} ${myarys[2]} ${Array.isArray(myarys)}`);
+
+    // arrays and obj
+    let ourstudents = [
+        {
+            boyone: "Maung Maung",
+            boytwo: "Aung Aung",
+            boythree: "Kyaw Kyaw"
+        },
+        {
+            girlone: "Su Su",
+            girltwo: "Muu Muu",
+            girlthree: "Lu Luu"
+        }
+    ];
+
+    console.log(ourstudents);
+    console.log(ourstudents[0].boyone,ourstudents[0].boythree);
+    console.log(ourstudents[1].girltwo,ourstudents[1].girlthree);
+
+    var aboutme = {
+        first  : "Thant Htet",
+        last : "Aung",
+        city : "Yangon",
+        age : 23,
+        favcolor : ["black","white","blue"],
+        favgame : {
+            game1 : "dota2",
+            game2 : "league of legends",
+            game3 : "counter strike"
+        },
+        favfruit : [
+            "mango",
+            "orange",
+            "banana"
+        ]
+    }
+    console.log(aboutme);
+    console.log(`${aboutme.first} ${aboutme.last} ${aboutme.city} ${aboutme.age}`);
+    console.log(`${aboutme.favcolor[0]} ${aboutme.favcolor[1]} ${aboutme.favcolor[2]}`);
+    console.log(`${aboutme.favgame.game1} ${aboutme.favgame.game2} ${aboutme.favgame.game3}`);
+    console.log(`${aboutme.favfruit[0]} ${aboutme.favfruit[1]} ${aboutme.favfruit[2]}`);
+
+    var aryalls = ["string",23,true,new Date(),{firstname: "Aung",lastname: "Aung"},["mango","orange","banana"],null];
+    console.log(aryalls);
+    console.log(Array.isArray(aryalls));
+    console.log(aryalls.length);
+
+    var chaarrays = "Hello World";
+    console.log(chaarrays);
+    console.log(chaarrays[3],chaarrays[4],chaarrays[6]);
+    console.log(Array.isArray(chaarrays)); // becuz string is not a pure array, string is character array type
+
+    var idxofarys = ["mid","safe lane","offlane","soft support","hard support"];
+    console.log(idxofarys);
+    console.log(idxofarys.indexOf("mid"),idxofarys.indexOf("safe lane"),idxofarys.indexOf("offlane"));
+    console.log(idxofarys.indexOf("jungle")); // result => -1 becuz jungle is not contains in array idxofayrs
+
+    // add arys
+    var addarys = [];
+    addarys[0] = "add zero";
+    addarys[1] = "add one";
+    addarys[2] = "add two";
+    addarys[5] = "add five";
+
+    console.log(addarys);
+    console.log(`${addarys[3]} ${addarys[4]}`);
+
+    // string method
+    // concat(+) append(+=) .concat() .charAt() .includes() .replace(old,new) .subString(idx,length)
+    // .toUpperCase() .toLowerCase() .style.css properties = "css value"
+    let firstchildname = "Ja";
+    let lastchildname = "Pu";
+
+    // let fullname = firstchildname + lastchildname; // concat(str1 + str2)
+    // console.log(fullname);
+
+    // let fullname = firstchildname += lastchildname; // append(str1 += str2)
+    // console.log(fullname);
+
+    // let fullname = firstchildname.concat(lastchildname); // .concat()
+    // console.log(fullname);
+
+    let fullname = firstchildname + lastchildname;
+    console.log(fullname,"Char At value => " + fullname.charAt(3)); // .charAt()
+
+
+    let mywords = "i like orange color and yellow color\n";
+    console.log(mywords.includes("orange")); // .includes()
+    console.log(mywords.includes("ORANGE"));
+
+    let myreplace1 = mywords.replace("orange","yellow"); // .replace()
+    let myreplace2 = mywords.replace("ora","fuckyou");
+    let myreplace3 = mywords.replace("color","fruits");
+    console.log(myreplace1,myreplace2,myreplace3);
+
+    let mysub = mywords.substring(0,13); // .subString()
+    console.log(mysub);
+
+    let myupper = mywords.toUpperCase(); // .toUpperCase()
+    let mylower = mywords.toLowerCase(); // .toLowerCase()
+
+    console.log(`${myupper} ${mylower}`);
+
+    let myheading1 = document.getElementById("myheading1").style.color = "red";
+    let myheading2 = document.getElementById("myheading2").style.backgroundColor = "yellow";
+    let myheading3 = document.getElementById('myheading3').style.fontSize = "20px";
+    console.log(myheading1,myheading2,myheading3);
+
+    // Array method
+    // toString() .join() .push() .unshift() .shift() .pop() delete var[] .splice() concat() .sort() .reverse()
+    let subjects = ["English","Myanmar","Physics","Chemistry","Biology"]; // manual array
+    subjects[5] = "Mechanics";
+    subjects[6] = "Circuits";
+    console.log(subjects);
+    console.log(subjects.toString());
+    console.log(typeof subjects.toString());
+    console.log(subjects.join("---"));
+    subjects.push("theory","control");
+    subjects.unshift("e-machine","plc");
+    subjects.shift();
+    subjects.shift();
+    subjects.shift();
+    subjects.pop();
+    subjects.pop();
+    subjects.pop();
+    delete subjects[2];
+    console.log(subjects[2]);
+    console.log(subjects.splice(0,4));
+
+    let myhobby = ["football","basketball","volleyball","game"];
+
+    let totalarys = subjects + myhobby;
+
+    console.log(typeof totalarys);
+    console.log(subjects.concat(myhobby),typeof subjects.concat(myhobby));
+
+    console.log(myhobby.sort());
+    console.log(myhobby.reverse());
+
+    let ourage = [11,20,1,55,2,30];
+    console.log(ourage);
+    console.log(ourage.sort());
+    console.log(ourage.reverse());
+    console.log(ourage.sort(function (m,n){
+        return m-n; // less than to greater
+    }))
+    console.log(ourage.sort(function (m,n){
+        return n-m; // greater than to less
+    }))
+
+    // Tenery Operator
+    let c1 = 100;
+    let c2 = 200;
+
+    console.log(c1 > c2 ? "c1 is greater than c2" : "c2 is greater than c1");
+
+    let c3 = 100;
+    let c4 = 100;
+
+    console.log(c3 >= c4 ? "c3 is greater than or equal c4" : "c3 is not greater than or equal c4");
+
+    // Comparision Operator
+
+    let c5 = "200"; // string
+    let c6 = 200; // number
+
+    // double equal checked only value
+    document.write(`<br> c5 and c6 (==) result is ${c5 == c6 ? "true" : "false"}`); // equal equal
+    document.write(`<br> c5 and c6 (!=) result is ${c5 != c6 ? "true" : "false"}`); // not equal
+    document.write(`<br>c5 and c6 (>) result is ${c5 > c6 ? "true" : "false"}`); // greater than
+    document.write(`<br>c5 and c6 (>=) result is ${c5 >= c6 ? "true" : "false"}`); // greater than equal
+    document.write(`<br>c5 and c6 (<) result is ${c5 < c6 ? "true" : "false"}`); // less than
+    document.write(`<br>c5 and c6 (<=) result is ${c5 <= c6 ? "true" : "false"}`); // less than equal
+
+    let c7 = "100"; // string
+    let c8 = 100; // number
+
+    // triple equal checked both datatype and value
+    document.write(`<br>c7 and c8 (===) result is ${c7 === c8 ? "true" : "false"}`); // triple equal
+
+    let c9 = "100"; // string
+    let c10 = 100; // number
+
+    // nout double equal checked bot datatype and value
+    document.write(`<br>c9 and c10 (!==) result is ${c9 !== c10 ? "true" : "false"}`); // not double equal
+
+    // Assignment operator
+    let a1 = 40; // = is assignment operator
+    let a2 = 20;
+
+    // let total = a1 + a2;
+    // console.log(total)
+    // a1 += a2; // += is assignment operator
+    // console.log(a1);
+
+    // let total = a1 - a2;
+    // console.log(total);
+    // a1 -= a2; // -= is assignment operator
+    // console.log(a2);
+
+    // let total = a1 * a2;
+    // console.log(total);
+    // a1 *= a2; // *= is assignment operator
+    // console.log(a1);
+
+    // let total = a1 / a2;
+    // console.log(total);
+    // a1 /= a2; // /= is assignment operator
+    // console.log(a1);
+
+    // let total = a1 % a2;
+    // console.log(total);
+    a1 %= a2; // %= is assignment operator
+    console.log(a1);
+
+    // if block
+    const x1 = 100;
+    const x2 = 200;
+
+    if (x1 < x2){
+        console.log("x1 is less than x2");
+    }
+
+    // if else block
+    const x3 = 300;
+    const x4 = 200;
+
+    if (x3 < x4){
+        console.log("x3 is less than x4");
+    }else {
+        console.log("x3 is greater than x4");
+    }
+
+    // if else-if else block
+    const x5 = "200";
+    const x6 = 200;
+
+    if (x5 === x6){
+        console.log("x5 is triple equal to x6");
+    } else if (x5 > x6){
+        console.log("x5 is greater than x6");
+    } else if (x5 < x6) {
+        console.log("x5 is less than x6");
+    } else {
+        console.log("All of the above condition is false");
+    }
+
+    // switch statement
+    const myfavcolor = "violet";
+
+    switch (myfavcolor) {
+        case "yellow":
+            console.log("yellow is not my fav color");
+            break;
+        case "pink":
+            console.log("i hate pink color");
+            break;
+        case "bluesea":
+            console.log("i like bluesea color a little bits");
+            break;
+        case "white":
+            console.log("My fav color is white");
+            break;
+        default:
+            console.log("All of the color is not myfav colors");
+            break;
+    }
+
+    // const today = new Date();
+    // console.log(findtoday);
+
+    // const findtoday = today.getDay();
+    // console.log(findtoday);
+
+    let day = 0;
+    let ourtoday = new Date();
+
+    let ourfriday = ourtoday.getDay();
+    console.log(ourfriday);
+
+    const totaldays = ["Monday","Tuesday","Wendesday","Thursday","Friday","Saturday","Sunday"];
+
+    totaldays.unshift(" ");
+
+    for(day; day < totaldays.length; day++){
+
+        // switch (ourtoday.getDay()) {
+        //     case day:
+        //         document.write(`Today is ${totaldays[day]} <br>`);
+        //         break;
+        //     default:
+        //         document.write(`Today is not ${totaldays[day]} <br>`);
+        //         break;
+        // }
+
+        if(day == ourfriday) {
+            document.write(`<br><h1 style="color: #0fdb46">Today is ${totaldays[day]}</h1>`);
+        }
+    }
+
+    // Logical operator
+
+    let l1 = 500;
+    let l2 = 200;
+    let l3 = 100;
+
+    if (l1 < l2 && l2 < l3 && l3 > l1){
+        console.log("&& logical operator is true");
+    } else if (l1 < l2 || l2 > l3 || l3 < l2){
+        console.log("|| logical operator is true");
+    } else {
+        console.log("all logical operator is false");
+    }
+
+    // for loop
+    let animals = ["dog","cat","bird","fish","lion","mouse","dragon"];
+    console.log(animals);
+
+    let x = 0;
+
+    // for(x; x < animals.length; x++) {
+    //     console.log(`Animals are ${animals[x]}`);
+    //
+    //     document.write(`Animals are ${animals[x]}<br>`);
+    // }
+    //
+    // console.log("Outside value of animals is " + x);
+
+    // for (x; x <= animals.length; x++) {
+    //     console.log(x);
+    //
+    //     document.write(`animals are ${animals[x]}<br>`);
+    // }
+    //
+    // console.log("outside value of animals: " + x);
+
+    // for (x; x < animals.length; x++) {
+    //     // console.log(x);
+    //     console.log(animals[x]);
+    //
+    //     if (x == 2) {
+    //         console.log("I am bird.");
+    //         break; // break
+    //     }
+    //
+    // }
+    //
+    // console.log("outside value of animals: " + x);
+
+    for (x; x < animals.length; x++) {
+
+        console.log(animals[x]);
+
+        if(x === 2) {
+            console.log("I am " + animals[x]);
+            continue;
+            // console.log("hello");
+            // console.log("i am hello"); //
+        }
+
+        if(x === 3) {
+            console.log("I am " + animals[x])
+            break;
+        }
+    }
+
+    console.log("outside value of animals: " + x); // result is 3 becuz of break;
+
+    // for loop with objects
+
+    let myobjets = [
+        {
+            student : "Maung Maung",
+            examresult : "pass",
+            marks : "80 marks"
+        },
+        {
+            student: "Aung Aung",
+            examresult: "fail",
+            marks: "20 marks"
+        },
+        {
+            student: "Hla Hla",
+            examresult: "pass",
+            marks: "41 marks"
+        }
+
+    ]
+
+    // console.log(myobjets);
+    // console.log(typeof myobjets);
+    // console.log(myobjets[0]);
+
+    let myobject = 0;
+
+    for (myobject; myobject < myobjets.length; myobject++){
+        console.log(myobjets[myobject]);
+
+        document.write(`<i><b>students are ${myobjets[myobject].student},${myobjets[myobject].examresult} and ${myobjets[myobject].marks}</b></i><br>`);
+    }
+
+    // for in loop with object
+    let mycolor = {
+        favcolor : "blue",
+        hatecolor : "vio-let",
+        mostfavcolor : "white"
+    }
+
+    // console.log(mycolor);
+    for (key in mycolor){
+        console.log(key);
+
+        document.write(`${key} is ${mycolor[key]}<br>`);
+    }
+
+    // for in loop with array
+    let teammembers = ["Maung Maung","Aung Aung","Laung Laung","Paung Paung"];
+    console.log(teammembers);
+
+    for(teammember in teammembers){
+        console.log(teammember);
+
+        document.write(`Our teammembers are ${teammembers[teammember]}<br>`);
+    }
+
+    // for in loop with string
+    let bdwish = "Happy birthday to you!";
+    console.log(bdwish);
+
+    for(key in bdwish){
+        // console.log(key);
+
+        document.write(bdwish[key] + "<br>");
+    }
+
+    // for of loop with array
+    let boymembers = ["Aung Aung","kyaw kyaw","kyaw ba","hla swe"];
+    console.log(boymembers);
+
+    for(boymember of boymembers){
+        console.log(boymember);
+
+        document.write(`Our team boymembers are ${boymember}<br>`);
+    }
+
+    // for of loop with string
+    let greeting  = "Hello Wrld, i am java script";
+    console.log(greeting);
+
+    for(val of greeting){
+        // console.log(val);
+
+        document.write(val + "<br>");
+    }
+
+    // while loop before printout
+    // let ournumber = 0;
+    //
+    // while (ournumber < 10){
+    //     ournumber++;
+    //     console.log(ournumber) // result => 1 to 10
+    // }
+    //
+    // console.log("Outside value of ournumber is " + ournumber);
+
+    // while loop after printout
+    let ournumber = 0;
+
+    while(ournumber <= 10){
+        console.log(ournumber); // result => 0 to 10
+        ournumber++;
+    }
+
+    console.log("outside value of ournumber is " + ournumber);
+
+    // while loop with array
+    let r = 0;
+    const ourroles = ["mid","safe lane","offlane","soft support","hard support"];
+    // console.log(ourroles);
+
+    while (r < ourroles.length){
+
+        // console.log(ourroles[r]);
+        document.write(`5 roles of dota2 are ${ourroles[r]}<br>`);
+        r++;
+    }
+
+    // while loop with object
+    let l = 0;
+    const aboutlaptop = [
+        {
+            laptopname : "dell",
+            ram : "5Gb",
+            cpu : "intel core i5",
+            generation : "6th generation",
+            harddisktype : "HDD"
+        }
+    ]
+
+    // console.log(aboutlaptop);
+
+    while (l < aboutlaptop.length){
+        // console.log(l);
+
+        // console.log(aboutlaptop[l]);
+        document.write(`laptop name is ${aboutlaptop[l].laptopname}<br>`);
+        document.write(`laptop ram is ${aboutlaptop[l].ram}<br>`);
+        document.write(`laptop cpu is ${aboutlaptop[l].cpu}<br>`);
+        document.write(`laptop generation is ${aboutlaptop[l].generation}<br>`);
+        document.write(`laptop hard disk type is ${aboutlaptop[l].harddisktype}<br>`);
+        l++;
+    }
+
+    // do while loop before printout
+    // let dovar = 0;
+    // do {
+    //
+    //     dovar++;
+    //     console.log(dovar); // 1 to 10 outside value is 10
+    //
+    // }while (dovar < 10);
+    //
+    // console.log("outside value is " + dovar);
+
+    let dovar = 0;
+
+    do {
+
+        console.log(dovar); // 0 to 9 outside value is 10
+        dovar++;
+
+    } while (dovar < 10);
+
+    console.log("outside value is " + dovar);
+
+    // dowhile loop with array
+    let gn = 0;
+    let girlnames = ["su su","hla hla","mya mya","daw thi","ma phyu"];
+
+    do {
+
+        // console.log(girlnames[gn]);
+        document.write(`Girl names are ${girlnames[gn]}<br>`);
+        gn++;
+
+    } while (gn < girlnames.length);
+
+    // dowhile loop with object
+    let varsusu = 0;
+    let aboutsusu = [
+        {
+          name : "su su",
+          age : 23,
+          city : "yangon",
+          relationship : "single"
+        }
+    ]
+
+    // console.log(aboutsusu);
+
+    do {
+
+        document.write(`Student name is ${aboutsusu[varsusu].name}<br>`);
+        document.write(`Student age is ${aboutsusu[varsusu].age}<br>`);
+        document.write(`Student live in ${aboutsusu[varsusu].city}<br>`);
+        document.write(`Student relationship is ${aboutsusu[varsusu].relationship}<br>`);
+        varsusu++;
+
+    } while (varsusu < aboutsusu.length);
+
+    let students = ["Maung Maung","Aung Aung","Kyaw Kyaw","Hla Hla","Su Su"];
+
+    students.forEach(function (value, index, array){
+        document.write(`Value: ${value}, Index: ${index} and Array: ${array}<br>`);
+    })
+
+    let cats = ["kit kit","pu tin","che che","gar gar","phoe thinganyun"];
+    console.log(cats);
+
+     cats.forEach(function (cat,idx,arys) {
+        document.write(`Cat name is ${cat}<br>`);
+        document.write(`Idx: ${idx}<br>`);
+        document.write(`Arys => ${arys}<br>`)
+    })
+
+    console.log(cats);
+
+    let visitors = ["Kyaw Kyaw","Hla Hla","Su Su","Phoe Kyaw","Pu Pu"];
+
+    // let mrpeople = visitors.forEach(function (visitor){
+    //     return (`Mrs.${visitor}`);
+    // })
+    //
+    // console.log(mrpeople);
+
+    console.log(visitors);
+
+    let guys = visitors.map(function (visitor,idx,arys) {
+
+        // console.log(`Name.${visitor}`);
+
+        return (`Name.${visitor}`);
+
+        // document.write(`visitor: ${visitor} index: ${idx}<br>`);
+        // document.write(`Arrays => ${arys}<br>`);
+    })
+
+    console.log(guys);
+
+    // regular function
+
+    // function mygreeting(){
+    //     console.log("Hello World");
+    // }
+    //
+    // mygreeting(); // overwrite value => Hello java scriptes
+    //
+    // function mygreeting(){
+    //     console.log("Hello java scripts");
+    // }
+    //
+    // mygreeting(); // overwrite value => Hello java scriptes
+
+    function funone() {
+        console.log("i am fun one");
+        funtwo();
+    }
+
+    function funtwo() {
+        console.log("i am fun two");
+    }
+
+    function funthree() {
+        console.log("i am fun three");
+        funone();
+    }
+
+    funthree();
+
+    // return
+    // function funfour() {
+    //     console.log(3);
+    // }
+    //
+    // funfour();
+    //
+    // function funfive(){
+    //     console.log(4);
+    // }
+    //
+    // funfive();
+    //
+    // function funsix(){
+    //     let x = funfour();
+    //     let y = funfive();
+    //
+    //     let total = x + y;
+    //     console.log(total);
+    // }
+    //
+    // funsix(); // NaN function cannot calculate with variable
+
+    function funseven() {
+        return 7;
+    }
+
+    console.log(funseven());
+
+    function funeight(){
+        let num = 8;
+        return num;
+    }
+
+    console.log(funeight());
+
+    function funnine(){
+        let x = 3;
+        let y = 19;
+
+        let total = x + y;
+
+        return total;
+    }
+
+    console.log(funnine());
+
+    function funten(){
+        let x = 3;
+        let y = 5;
+        let z = 10;
+
+        let total = x + y + z;
+
+        // return x; // 3
+        // return y; // 5
+        // return z; // 10
+        // return total; // 18
+
+        return "hee hee"; // hee hee
+    }
+
+    console.log(funten());
+
+    // parameter function(single)
+    function mycity(city){
+        console.log(`our city is ${city}`);
+    }
+
+    mycity(); // undefined
+    mycity("Yangon");
+    mycity("Mandalay");
+    mycity("NayPyiTaw");
+
+    // parameter function(single=default)
+    function mycountry(country="Myanmar"){
+        console.log(`Our country is ${country}`);
+    }
+
+    mycountry(); // Myanmar(default)
+    mycountry("Indonesia");
+    mycountry("Singapore");
+    mycountry("Malaysia");
+
+    // parameter function(multi)
+    function ourstudent(name,age,city){
+        console.log(`Name: ${name} Age: ${age} City: ${city}`);
+    }
+
+    ourstudent(); // undefined
+    ourstudent("maung maung",23,"yangon"); // maung maung, 23, yangon
+    ourstudent("maung maung",23); // maung maung, 23, undefined
+    ourstudent("maung maung",23,"yangon","failed"); // maung  maung , 23, yangon
+
+    function funsun(x,y,z){
+        let total = x + y + z;
+
+        return total;
+    }
+
+    console.log(funsun()); // NaN
+    console.log(funsun(1,2,3)); // 6
+    console.log(funsun(1,2)); // NaN
+    console.log(funsun(1,2,3,4)); // 6
+
+    function funret(){
+        let x = 1;
+        let y = 2;
+        let z = 3;
+
+        let total = x + y + z;
+
+        // return x + y + z;
+        return total;
+
+        // return let total = x + y + z; // error
+        // return var total = x + y + z; // error
+        // return const total = x + y + z; // error
+    }
+
+    console.log(funret());
+
+    function mydefault(x=1,y=2,z=3){
+        let mydefaulttotal = x + y + z;
+
+        return mydefaulttotal;
+    }
+
+    console.log(mydefault()); // 6
+    console.log(mydefault(2,3,4)); // 9
+    console.log(mydefault(2,3)); // 8
+    console.log(mydefault(2,3,4,5)); 9
+
+    // constructor function(string structure)
+    let confunone = new Function("j","k","l","return j+k+l");
+
+    console.log(confunone()); // NaN
+    console.log(confunone(1,2,3)); // 6
+    console.log(confunone(1,2)); // NaN
+    console.log(confunone(1,2,3,4)); // 6
+
+    let confuntwo = new Function("student","age","city","return student+age+city");
+
+    console.log(confuntwo()); // NaN
+    console.log(confuntwo("maung maung",23,"yangon"));// maung maung23yangon
+    console.log(confuntwo("maung maung",23,"yangon","failed")); // maung maung23yangon
+    console.log(confuntwo("maung maung",23)); // maung  maung23undefined
+
+    // Nameless function => function()
+
+    let namelessfunone = function (studentid,myclass){
+        return studentid + " " + myclass;
+    }
+
+    console.log(namelessfunone("WDF7675","css animation")); // WDF7675 css animation
+    console.log(namelessfunone()); // undefined
+    console.log(namelessfunone("WDF7675")); // WDF7675 undefined
+    console.log(namelessfunone("WDF7675","css animation","24BE")); // WDF7675 css animation
+
+    let namelessfuntwo = function () {
+        let a = 10;
+        let b = 11;
+        let c = 12;
+
+        let total = a + b + c;
+        console.log(total);
+    }
+
+    namelessfuntwo(); // 23
+
+    let namelessfunthree = function (x,y,z){
+        console.log(`x vale: ${x} y value: ${y} and z value: ${z}`);
+    }
+
+    namelessfunthree(); // undefined
+    namelessfunthree(1,2,3); // 1,2,3
+    namelessfunthree(1,2); // 1,2,undefined
+    namelessfunthree(1,2,3,4); // 1,2,3
+
+    // let namelessfunfour = function (x=1,y=1,z=1){
+    //     let total = x + y + z;
+    //
+    //     return total;
+    // }
+    //
+    // console.log(namelessfunfour()); // 3
+    // console.log(namelessfunfour(2,3,4)) // 9
+    // console.log(namelessfunfour(2,3,4,5)) // 9
+    // console.log(namelessfunfour(2,3)) // 6
+
+    // self invoking function (function(){-----})();
+    (function (){
+        console.log("i am self invoking function");
+    })();
+
+    (function (x,y,z){
+        let total = x + y + z;
+
+        console.log(total);
+    })(1,2,3);
+
+    (function (name,age,id){
+        console.log(`${name} ${age} ${id}`);
+    })("maung maung",23,"WDF7676");
+
+    (function (country = "Myanmar"){
+        console.log(`My country is ${country}`);
+    })("Indonesia");
+
+    let arwfun1 = ()=>{
+        console.log("Hello World");
+    }
+
+    arwfun1();
+
+    let arwfun2 = ()=>{
+        let numberone = 1;
+        let numbertwo = 2;
+
+        return numberone + numbertwo;
+    }
+
+    console.log(arwfun2());
+
+    let arwfun3 = (numberone,numbertwo)=>{
+        return numberone + numbertwo;
+    }
+
+    console.log(arwfun3(5,3));
+
+    let arwfun4 = (country)=>{
+        return country;
+    }
+
+    console.log(`Our Country is ${arwfun4("Myanmar")}`);
+
+    let arwfun5 = (numone=1,numtwo=2,numthree=3)=>{
+        return numone * numtwo * numthree;
+    }
+
+    console.log(`Multiplication result is ${arwfun5(2,4,5)}`);
+
+    let arwfun6 = greeting=>{
+        return greeting;
+    }
+
+    console.log(arwfun6("Hello World"));
+
+    let arwfun7 = bdwish => bdwish;
+
+    console.log(arwfun7("Hello World"));
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+<!-- My Note
+
+console.log()
+windows.alert()
+.alert()
+.prompt()
+
+document.getElementById("").innerText/.innerHTML/.textContent <= change text
+
+How to know click the button?
+    we can write inline style with onclick attributes inside HTML tag.
+
+new Date()
+DateTime => .getDate() .getSeconds() .getMinutes() .getHours .getTime() .getDays() .getMonths .getUTCFullYears()
+            .setDate() .setSeconds() .setMinutes() .setHours .setTime() .setDays(0 .setMonths .setUTCFullYears()
+
+Math => Math.round() Math.floor() Math.ceil() Math.sqrt() Math.pow(base,power) Math.abs() Math.max() Math.min() Math.random()
+
+Arithmetic Operator => + - * / % ++ --
+                        ++var is before operation and var++ after operation
+                        --var is before operation and var-- after operation
+
+7 types of Datatype => String,number,boolean,null,undefined,js object and array
+typeof => can check what type of datatype
+
+Change String => Sting() and .toString()
+
+Change Number => Number() and +
+                 parse INT() and parse Float()
+
+.toFixed() => declare the decimal number
+
+Change Array => Array.isfrom()
+                check array or not => Array.isArray();
+                *only String can change Array
+
+How to call back js objects and array?
+    Js objects can call .(dott) and array can call back value with [index] index number.
+    String is also an array type but not pure array.String is characteristics array.
+
+.indexOf() => can find index number of array
+
+String Method => concat(+) append(+=) .concat() .include() .replace(old,new)/case sensitive
+                 .subString(index,length) .toUpperCase() .toLowerCase() .style.css properties = "css value"
+
+Array Method => pure array, .join() .push()/back .unshift()/front .shift()/front .pop()/back
+                .splice(index,length) .concat() .sort()/A to Z .reverse()/Z to A
+
+
+
+
+
+-->

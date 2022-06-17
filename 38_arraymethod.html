@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Method</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// Manual Array
+    let arrcolors = ['orange','green','yellow','red','pink'];
+
+    console.log(arrcolors);
+    console.log(arrcolors.length);
+    console.log(arrcolors[2]);
+    console.log(arrcolors.indexOf('red'));
+
+//    Character Array in JS
+    let name = "John";
+    console.log(Array.isArray(name)); // false
+    console.log(Array.isArray(arrcolors)); // true
+
+    console.log(arrcolors);
+    console.log("Array to string by toString " + arrcolors.toString());
+    console.log("Array to string by join " + arrcolors.join("-"));
+
+    const n = ["red","green","blue"];
+
+    n[3] = "yellow";
+    n[4] = "deepblue";
+
+    console.log(n);
+
+//    Add new value to array (Addon to the end)
+    n.push("gold");
+    n.push("silver");
+    n.push("violet","skyblue");
+
+    console.log(n);
+
+//    Add new value to array (Addon to front)
+    n.unshift("tomato");
+    n.unshift("grey","deepblack");
+    console.log(n);
+
+//    Remove value and index (take off from front)
+    n.shift();
+    n.shift();
+    console.log(n);
+
+//    Remove value and index (take off from end)
+    n.pop();
+    n.pop();
+    console.log(n);
+
+//    Remove only value
+    delete n[2];
+    console.log(n);
+    console.log(n.length);
+    console.log(n[2]);
+
+//    splice(index,length(space))
+    let p = n.splice(0,5);
+    console.log(p);
+    console.log(p.length);
+
+//    Combine Array
+    let boynames = ["Aung Aung","Maung Maung","Kyaw Kyaw"];
+    let girlnames = ["Su Su","Mya Mya","Aye Aye"];
+    let numbers = [100,200,300];
+
+    console.log(boynames+girlnames); // okay but that is string value
+    console.log(boynames.concat(girlnames));
+    console.log(girlnames.concat(boynames));
+    console.log(boynames.concat(boynames));
+    console.log(girlnames.concat(numbers));
+
+//    Array Sorting
+    const studentnames = boynames.concat(girlnames);
+    console.log(studentnames);
+    console.log(studentnames[3]);
+
+//    Sorting A to Z ( sort() doesn't work in number )
+    console.log(studentnames.sort());
+    console.log(studentnames[3]);
+
+//    Sorting Z t A ( reverse() doesn't work in number )
+    console.log(studentnames.reverse());
+
+//    Sorting number
+    const sortnumbers = [100,1,200,5,1000,10,300,3];
+
+    console.log(sortnumbers);
+    console.log(sortnumbers.sort());
+
+    console.log(sortnumbers.sort(function(m,n){
+        // return m-n;
+        return n-m;
+    }))
+
+</script>
+
+</body>
+</html>

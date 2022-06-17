@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>My Homework 3</title>
+</head>
+<body>
+    <center>
+        <img src="./img/election.jpg" alt="election" width="125px" height="100px">
+        <h3><u>Welcome To 2020 Election</u></h3>
+        <span>Citizen ID: WDF(7675)</span>
+    </center>
+    <hr>
+    <!-- table -->
+    <center>
+        <form action="" enctype="multipart/form-data">
+            <table border="1">
+                <thead>
+                    <tr bgcolor="yellow">
+                        <th colspan="2">Election Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="lName">Leader Name:</label></td>
+                        <td>
+                            <input type="text" name="lName" id="lName" class="" autocomplete="off" placeholder="Enter Leader Name" autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="yName">Your Name:</label></td>
+                        <td>
+                            <input type="text" name="yName" id="yName" class="" autocomplete="off" placeholder="Enter Your Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td>
+                            <input type="email" name="email" id="email" class="" autocomplete="off" placeholder="Enter Your Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Passcode:</label></td>
+                        <td>
+                            <input type="password" name="pass" id="pass" class="" autocomplete="off" placeholder="Enter Your Passcode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Parties:</label></td>
+                        <td>
+                            <!-- radio -->
+                            <input type="radio" name="parties" id="nld" class="">
+                            <label for="nld">NLD</label>
+                            <input type="radio" name="parties" id="usdp" class="">
+                            <label for="usdp">USDP</label>
+                            <input type="radio" name="parties" id="ppp" class="">
+                            <label for="ppp">PPP</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">Location:</label></td>
+                        <td>
+                            <!-- dropodown -->
+                            <select name="city" id="city" class="">
+                                <option value="">Choose City</option>
+                                <option value="yangon">Yangon</option>
+                                <option value="mandalay">Mandalay</option>
+                                <option value="naypyitaw">Nay Pyi Taw</option>
+                                <option value="bago">Bago</option>
+                                <option value="mawlamyine">Mawlamyin</option>
+                                <option value="taunggyi">Taunggyi</option>
+                                <option value="pathein">Pathein</option>
+                                <option value="myeik">Myeik</option>
+                                <option value="sittwe">Sittwe</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" name="uAgree" id="uAgree" class="" checked>
+                            <label for="uAgree">
+                                I accept all the regulation of election Community
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <button type="reset" name="cancel" id="cancel" class="">Cancel</button>
+                            <button type="submit" name="login" id="login" class="">Login</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </center>
+    <hr>
+    <center>
+        <span>Already Register!</span>
+        <a href="#">Click Here to Login</a>
+    </center>
+</body>
+</html>

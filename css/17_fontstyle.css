@@ -1,0 +1,153 @@
+*{
+    cursor: pointer;
+}
+
+/* Local font integrated */
+body{
+    font-family: 'Arial';
+}
+
+/* .p1 {
+    font-family: 'Century', 'Arial';
+}
+
+.p2 {
+    font-family: 'Century','Arial','Time New Rormen';
+} */
+
+/* Project Folder Integrated */
+/* at-rules */
+
+/* for Stick font */
+@font-face {
+    font-family: 'Stick';
+    src: local('Stick-Regular'), url('../libs/fonts/stick/Stick-Regular.ttf') format('woff');
+}
+
+/* for Akaya font */
+@font-face {
+    font-family: 'Akaya';
+    src: local('AkayaTelivigala-Regular'), url('../libs/fonts/akayatelivigala/AkayaTelivigala-Regular.ttf') format('woff');
+}
+
+
+/* body{
+    font-family: 'Stick', sans-serif;
+} */
+
+.p1{
+    font-family: 'Stick';
+    text-indent: 50px;
+}
+
+.p2, .p3, .p5{
+    font-family: 'Akaya';
+    text-indent: 50px;
+}
+
+.p4 {
+    font-family: 'Century', 'Arial';
+    /* font-weight: bold; */
+    /* font-weight: bolder; */
+
+    /* font weight range => 100 to 900 */
+    font-weight: 900;
+    font-style: italic;
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    text-transform: capitalize;
+
+    /* text indentation */
+    text-indent: 50px;
+}
+
+
+/* Global font Integrated */
+
+/* body{
+    font-family: 'Stick', sans-serif;
+} */
+
+/* .p1{
+    font-family: 'Stick', sans-serif;
+}
+
+.p2{
+    font-family: 'Stick', sans-serif;
+}
+
+.p3{
+    font-family: 'Akaya Kanadaka', cursive;
+} */
+
+.clickme{
+    font-family: 'Akaya', 'Century';
+    text-decoration: none;
+    /* color: red; */
+}
+
+.clickme:visited{
+    color: green;
+}
+
+.clickme:hover{
+    color: rebeccapurple;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.menutext{
+    font-family: 'Akaya';
+    text-decoration: none;
+    background-color: black;
+    color: white;
+
+    /* padding: 10px; */
+
+    /* top&buttom left&right */
+    /* padding: 5px 20px; */
+
+    /* top right buttom left */
+    /* padding: 10px 20px 30px 40px; */
+
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    border-radius: 10px;
+
+    /* 1s = 1000ms */
+    /* 1ms ----- 500 ms ----- 1000ms */
+
+    /* transition: all 5s; */
+
+    transition: background-color 3s, color 5s;
+}
+
+
+
+.menutext:hover{
+    background-color: orange;
+    font-size: 20px;
+    color: black;
+}
+
+.heading{
+    font-family: 'Akaya', 'Century';
+    text-transform: uppercase;
+    color: purple;
+}
+
+.imgdesign{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    transition: all 3s;
+}
+
+.imgdesign:hover{
+    width: 80px;
+    height: 50px;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Conversion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let variable;
+
+      console.log(variable);
+
+      // string
+      variable = "Aung Aung";
+
+      console.log(variable);
+      console.log(typeof variable);
+      console.log(variable.length); // string, array method
+
+      // number to string
+      // variable = 20;
+      variable = "20";
+      variable = "20";
+      variable = `20`;
+      variable = String(20);
+      console.log(variable);
+      console.log(typeof variable);
+      console.log(variable.length);
+
+      variable = "20 + 20"; // 20 + 20
+
+      console.log(variable);
+      console.log(typeof variable);
+      console.log(variable.length);
+
+      let v1 = "20";
+      let v2 = "20";
+      v = v1 + v2; // 2020
+
+      console.log(v);
+      console.log(typeof v);
+      console.log(v.length);
+
+      v = String(20 + 10); //30
+
+      console.log(v);
+      console.log(typeof v);
+      console.log(v.length);
+
+      // Bol to String
+
+      v = true;
+      v = String(v);
+      console.log(v);
+      console.log(typeof v);
+      console.log(v.length);
+
+      // Date to String
+
+      v = new Date();
+      v = String(new Date());
+
+      console.log(v);
+      console.log(typeof v);
+      console.log(v.length);
+
+      // Array to string
+
+      v = [1, 2, 3, 4, 5];
+      v = "[1,2,3,4,5]"; // [1,2,3,4,5]
+      v = String([1, 2, 3, 4, 5]); // 1,2,3,4,5
+      v = v.toString(); // 1,2,3,4,5
+
+      console.log(v);
+      console.log(typeof v);
+      console.log(v.length);
+
+      //  --------------------------------------------------------------------
+
+      //  String to Number
+
+      let number = "20";
+      number = Number(number);
+      number = +number;
+
+      console.log(number);
+      console.log(typeof number);
+      console.log(number.length);
+
+      // number = prompt('Enter number: ');
+      // number = Number(prompt('Enter number: '));
+      // number = +prompt('Enter number: ');
+
+      console.log(number);
+      console.log(typeof number);
+      console.log(number.length);
+
+      let myname = "aung aung";
+      myname = Number(myname); // NaN -> not a number
+      myname = +myname;
+      myname = [1, 2, 3, 4, 5];
+      myname = Number(myname);
+
+      console.log(myname);
+      console.log(typeof myname);
+      console.log(myname.length);
+
+      let val = 123.45678;
+      console.log(val);
+      console.log(val.toFixed(2));
+
+      val = "123.456";
+      val = parseInt(val);
+
+      console.log(val);
+      console.log(typeof val);
+      // console.log(float.length);
+      console.log(val.toFixed(3));
+
+      val = "123.456";
+      val = parseFloat(val);
+
+      console.log(val);
+      console.log(typeof val);
+
+    //  Boolean to number
+
+      val = Number(false);
+      val = Number(true);
+
+      console.log(val);
+      console.log(typeof val);
+
+    //  ---------------------------------
+
+    //  String to Array
+
+      val = "kit kit";
+      val = Array.from(val);
+      console.log(val);
+      console.log(typeof val);
+      console.log(val.length);
+      console.log(Array.isArray(val));
+
+    //  can't convert to array
+
+      val = 2;
+      val = Array.from(val);
+      console.log(val);
+      console.log(typeof val);
+      console.log(Array.isArray(val));
+
+      val = true;
+      val = Array.from(val);
+      console.log(val);
+      console.log(typeof val);
+
+      val = {
+        first : 'Thant',
+        middle : 'Htet',
+        last : 'Aung'
+      }
+      val = Array.from(val);
+      console.log(val);
+      console.log(typeof val);
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+:root{
+    --gn : green;
+    --oc : orange;
+    --rc : red;
+    --bu : blue;
+    --pk : pink;
+}
+
+.divOne{
+    width: 100px;
+    height: 80px;
+    background-color: var(--gn);
+
+    transform: rotate(45deg);
+}
+
+.divTwo{
+    width: 100px;
+    height: 80px;
+    background-color: var(--oc);
+
+    transform: rotate(-50deg);
+}
+
+.divThree{
+    width: 200px;
+    height: 80px;
+    background-color: var(--rc);
+
+    transform: rotateX(120deg);
+}
+
+.divFour{
+    width: 200px;
+    height: 80px;
+    background-color: var(--bu);
+
+    transform: rotateY(150deg);
+}
+
+.divFive{
+    width: 200px;
+    height: 80px;
+    background-color: var(--pk);
+
+    transform: scale(0.5);
+}
+
+.divSix{
+    width: 200px;
+    height: 80px;
+    background-color: var(--pk);
+
+    transform: skew(50deg);
+    /* transform: skew(-50deg); */
+}
+
+.divSeven{
+    width: 200px;
+    height: 80px;
+    background-color: var(--oc);
+
+    transform: translate(50%);
+    /* transform: translate(100%); */
+    /* transform: translate(-50%); */
+    /* transform: translate(-100%); */
+
+    /* transform: translate(100px); */
+    /* transform: translate(200px); */
+    /* transform: translate(-100px); */
+    /* transform: translate(-200px); */
+
+    transform: translateX(100%);
+    /* transform: translateX(-100%); */
+
+    /* transform: translateY(50%); */
+    /* transform: translateY(100%); */
+    /* transform: translateY(-50%); */
+    /* transform: translateY(-100%); */
+}
+
+.role{
+    font-size: 16px;
+
+    /* Vendor Prefix Properties */
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    appearance: none;
+
+    padding: 10px 30px 10px 10px;
+    background-image: url('../img/icon/downarrow.png');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+}
+
+h1{
+    text-align: center;
+}
+
+p.text{
+    color: red;
+    text-align: center;
+}
+
+@media(max-width: 600px) {
+    h1{
+        font-size: 30px;
+        color: aquamarine;
+    }
+
+    p.text{
+        color: green;
+    }
+}
+

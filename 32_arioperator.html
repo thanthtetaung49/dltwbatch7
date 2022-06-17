@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Arithmetic Operator</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let greeting; // can
+    // var greeting; // can
+    // const greeting; // error
+
+    console.log(greeting);
+
+    //    Group variable declaration
+    //     let num1,num2,num3; // no value give => no error
+    let num1 = 1, // value give => no error
+        num2 = 2,
+        num3 = 3;
+
+    console.log(num1);
+    console.log(num2);
+    console.log(num3);
+
+    // var num1,num2,num3; // no value give => no error
+    var num4 = 100, // value give => no error
+        num5 = 200,
+        num6 = 300;
+
+    console.log(num4);
+    console.log(num5);
+    console.log(num6);
+
+    // const num7,num8,num9; // no value give => result is error
+    const num7 = 400, // value give => no error
+        num8 = 500,
+        num9 = 600;
+
+    console.log(num7);
+    console.log(num8);
+    console.log(num9);
+
+    let num10 = 10,
+        num11 = 20,
+        num13 = 30;
+
+    document.write('Adding result => ' + (num10 + num11) + '<br>');
+    document.write('Substration result => ' + (num10 - num11) + '<br>');
+    document.write('Multiplication result => ' + (num10 * num11) + '<br>');
+    document.write('Division result => ' + (num10 / num11) + '<br>');
+    document.write('Modules result => ' + (num10 % num13) + '<br>');
+
+    // document.write('Increment after result => ' + (num10++) + '<br>'); // 10 -> 10 + 1
+    // document.write('Increment after result => ' + (num10++) + '<br>'); // 11 -> 11 + 1
+    // document.write('Increment after result => ' + (num10++) + '<br>'); // 12 -> 12 + 1
+    // document.write('Increment after result => ' + (num10) + '<br>'); // 13
+    // document.write('Increment after result => ' + (num10) + '<br>'); // 13
+
+    document.write('Increment before result => ' + (++num10) + '<br>'); // 1 + 10 -> 11
+    document.write('Increment before result -> ' + (++num10) + '<br>'); // 1 + 11 -> 12
+    document.write('Increment before result => ' + (num10) + '<br>'); // 12
+    document.write('Increment before result => ' + (++num10) + '<br>'); // 1 + 12 -> 13
+    document.write('Increment after result => ' + (num10++) + '<br>'); // 13 -> 13 +1
+    document.write('Increment after result => ' + (num10) + '<br>'); // 14
+
+    document.write('Decrement after result => ' + (num11--) + '<br>'); // 20 -> 20 -1
+    document.write('Decrement after result => ' + (num11--) + '<br>'); // 19 -> 19 -1
+    document.write('Decrement after result => ' + (num11) + '<br>'); // 18
+    document.write('Decrement before result => ' + (--num11) + '<br>'); // 1 - 18 -> 17
+    document.write('Decrement before result => ' + (--num11) + '<br>'); // 1 - 17 -> 16
+</script>
+</body>
+</html>

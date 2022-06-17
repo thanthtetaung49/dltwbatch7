@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Method</title>
+</head>
+<style>
+    /*#mm {*/
+    /*    color: red;*/
+    /*}*/
+
+    /*#tl {*/
+    /*    font-size: 30px;*/
+    /*}*/
+</style>
+<body>
+<div class="county">
+    <h1 id="mm">Myanmar</h1>
+    <h1 id="tl">Thailand</h1>
+</div>
+<script type="text/javascript">
+
+    // string method
+    let firstname = "Maung Maung ";
+    let lastname = "Kyaw";
+    console.log(firstname);
+    console.log(lastname);
+    console.log(firstname.length);
+
+    // concat ( string +)
+    let fullname = firstname + lastname;
+    console.log(fullname);
+
+    // append
+    firstname += lastname;
+    console.log(firstname);
+
+    // concat()
+    var fstname = "Zay yar ";
+    var lstname = "Kyaw"
+    var fname = fstname.concat(lstname);
+    console.log(fname);
+
+    // Character Array
+    console.log(fname.length);
+    console.log(fname[2]);
+                        // 12 - 1
+                        // fname[11]
+    console.log(fname[fname.length - 1]);
+
+    // CharAt()
+    console.log(fname.charAt(2));
+                                // 12 -1
+                                // 11
+    console.log(fname.charAt(fname.length - 1))
+
+    // include()
+    let fav = "My favourite color is black color.";
+    console.log(fav);
+    console.log(fav.includes('black')); // true
+    console.log(fav.includes('red')); // false
+    console.log(fav.includes('BLACK')); // false
+    console.log(fav.includes('BLACK')); // false
+    console.log(fav.includes('bla')); // true
+
+    // replace(old,new)
+    console.log(fav.replace('black','blue'));
+    console.log(fav.replace('bla','red')); // redck
+    console.log(fav.replace('color','papa')); // first color is replaced by color
+
+    //    substring(index,length)
+    console.log(fav.substring(0, 10) + ".....");
+    console.log(fav.substring(0, 10).concat("....."));
+
+    //    change case
+    console.log(fav.toUpperCase());
+    console.log(fav.toLowerCase());
+
+    //    style
+    document.getElementById('mm').style.color = "red";
+    document.getElementById('mm').style.fontSize = '30px';
+
+    document.getElementById('tl').style.color = "green";
+    document.getElementById('tl').style.color = "50px";
+    document.getElementById('tl').style.fontFamily = 'Arial';
+    document.getElementById('tl').style.display = 'none';
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    console.log('hay');
+
+    const name = {
+        firstname : "Kyaw",
+        lastname : "Kyaw"
+    }
+
+    console.log(name.firstname,name.lastname);
+
+    let person = {
+        person1 : "Aung Aung",
+        person2 : "Maung Maung",
+        person3 : "Hla Hla"
+    }
+
+    console.log(person.person1,person.person2,person.person3);
+
+//    Manual Array (Array start from index no 0)
+//    Length start from 1
+
+    let arrays = new Array("su su","pu pu","lu lu");
+
+    console.log(arrays);
+    console.table(arrays);
+    console.log(arrays.length);
+
+    console.log(arrays[0]);
+    console.log(arrays[1]);
+    console.log(arrays[2]);
+    console.log(arrays[3]); // undefined
+
+    let arrboys = ['kit kit','pyae pyae','pu tin','micheal'];
+
+    console.log(arrboys);
+    console.log(arrboys.length);
+    console.table(arrboys);
+
+    console.log(arrboys[0]);
+    console.log(arrboys[1]);
+    console.log(arrboys[2]);
+    console.log(arrboys[3]);
+
+    let x = [100,200,300,400,500];
+
+    console.log(x);
+    console.log(x.length);
+    console.table(x);
+    console.log(typeof x);
+
+    console.log(x[0]);
+    console.log(x[1]);
+    console.log(x[2]);
+    console.log(x[4]);
+    console.log(x[5]); // undefined
+
+    let totalarys = ['string',100,true,undefined,new Date(),{firstname: 'mg mg',lastname: 'kyaw'},null];
+
+    console.log(totalarys);
+    console.log(totalarys.length);
+
+    console.log(totalarys[0]);
+    console.log(totalarys[1]);
+    console.log(totalarys[2]);
+    console.log(totalarys[3]);
+    console.log(totalarys[4]);
+    console.log(totalarys[5].firstname);
+    console.log(totalarys[5].lastname);
+    console.log(totalarys[6]);
+
+    let m = [1000,2000,3000,4000,5000];
+
+    console.log(m);
+    console.log(m.length);
+    console.table(m);
+
+    console.log(m[0]);
+    console.log(m[1]);
+    console.log(m[2]);
+    console.log(m.indexOf(2000)); // index no result => 1
+    console.log(m.indexOf(3000)); // index no result => 2
+    console.log(m.indexOf(4000)); // index no result => 3
+    console.log(m.indexOf(5000)); // index no result => 4
+    console.log(m.indexOf(1000)); // index no result => 0
+    console.log(m.indexOf('1000')); // index no result => -1
+
+//    String is character array in js
+
+    let str = 'kit kit';
+
+    console.log(str);
+    console.log(str.length);
+    console.log(typeof str);
+
+    console.log(str[0]);
+    console.log(str[2]);
+    console.log(str[6]);
+
+    let colors = [];
+
+    colors[5] = 'red';
+    colors[0] = 'orange';
+    colors[1] = 'pink';
+    colors[10] = 'deeppink';
+
+    console.log(colors)
+    console.log(colors.length);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+</head>
+<body>
+<div>
+    <small>Copy right: <span id="diyear">2021 </span>Reserved</small>
+</div>
+<script type="text/javascript">
+    let date = new Date();
+    console.log(date);
+
+    let userdate = new Date().getDate();
+    // let userdate = date.getDate();
+    console.log(`This is date => ${userdate}`);
+
+    let userhours = new Date().getHours();
+    console.log(`This is Hou`
+    rs => ${userhours}`);
+
+    let userminutes = new Date().getMinutes();
+    console.log(`
+    This
+    is
+    minutes => ${userminutes}`);
+
+    let usersec = new Date().getSeconds();
+    console.log(`
+    This
+    is
+    seconds => ${usersec}`);
+
+    // 1s = 1000ms
+    //1 jan 1970 > upnow
+    // let usertime = new Date().getTime();
+    // console.log(`
+    This
+    is
+    time => ${usertime}`);
+    let usertime = Date.now();
+    console.log(`
+    This
+    is
+    time => ${usertime}`);
+
+    // return index number jan is 0 and dec is 11
+    let usermonth = date.getMonth();
+    console.log(`
+    This
+    is
+    month => ${usermonth}`);
+
+    let userday = date.getDay();
+    console.log(`
+    This
+    is
+    Day => ${userday}`);
+
+    let useryear = date.getFullYear();
+    console.log(`
+    This
+    is
+    year => ${useryear}`);
+
+    let utcyear = date.getUTCFullYear();
+    console.log(`
+    This
+    is
+    UTC
+    year => ${utcyear}`);
+
+    document.getElementById('diyear').textContent = utcyear;
+
+    // month day year hour:min:sec
+    let birthday = new Date('1-11-1999');
+    birthday = new Date('1-11-1999 6:20:45');
+    birthday = new Date('Jan 11 1999 6:30:33');
+    birthday = new Date('January 11 1999');
+    birthday = new Date('1/11/1999 6:50:23');
+
+    console.log(`
+    My
+    birthday
+    is ${birthday}`);
+
+    let today = new Date();
+    console.log(`
+    Today
+    is ${today}`);
+
+    // jan is index 0
+    today.setMonth(0);
+    today.setDate(11);
+    today.setFullYear(1999);
+    today.setHours(18);
+    today.setMinutes(20);
+    today.setSeconds(34);
+
+    console.log(`
+    Change
+    Date
+    is ${today}`);
+
+
+
+</script>
+</body>
+</html>

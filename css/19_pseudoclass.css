@@ -1,0 +1,110 @@
+.divOne{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    color: white;
+}
+
+/* .divOne:first-child{
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:first-of-type{
+    background-color: green;
+    color: black;
+} */
+
+/* .divOne:last-child{
+    background-color: blue;
+    color: white;
+} */
+
+/* .divOne:last-of-type{
+    background-color: red;
+    color: black;
+} */
+
+/* .divOne:nth-of-type(3){
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:nth-child(4){
+    background-color: white;
+    color: black;
+} */
+
+/* .divOne:nth-of-type(even){
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:nth-of-type(odd){
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:nth-child(even){
+    background-color: white;
+    color: black;
+} */
+
+/* .divOne:nth-child(odd){
+    background-color: white;
+    color: black;
+} */
+
+/* ------------------------------ */
+
+/* Child vs Type */
+
+/* .divOne:first-child{
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:first-of-type{
+    background-color: green;
+    color: black;
+} */
+
+/* .divOne:last-child{
+    background-color: blue;
+    color: white;
+} */
+
+/* .divOne:last-of-type{
+    background-color: red;
+    color: black;
+} */
+
+/* .divOne:nth-of-type(3){
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:nth-child(4){
+    background-color: white;
+    color: black;
+} */
+
+/* .divOne:nth-of-type(even){
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:nth-of-type(odd){
+    background-color: yellow;
+    color: black;
+} */
+
+/* .divOne:nth-child(even){
+    background-color: white;
+    color: black;
+} */
+
+.divOne:nth-child(odd){
+    background-color: white;
+    color: black;
+}

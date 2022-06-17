@@ -1,0 +1,43 @@
+/* Single Selector */
+h1 {
+    color: red;
+}
+
+/* Group Selector */
+
+h2,h3,h4 {
+    color: green;
+}
+
+/* ID Selector */
+#love, #myanmar {
+    color: rosybrown;
+}
+
+#japu, span {
+    color: springgreen;
+}
+
+/* Class selector */
+.phone {
+    color: tomato;
+}
+
+.ph {
+    font-size: 30px;
+}
+
+.number {
+    color: yellowgreen;
+    font-size: 20px;
+}
+
+#number {
+    color: violet;
+    font-size: 25px;
+}
+
+div {
+    color: turquoise;
+    font-size: 20px;
+}

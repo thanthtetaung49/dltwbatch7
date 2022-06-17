@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Form Tag</title>
+    </head>
+    <body>
+        <h3>Form Element</h3>
+        <fieldset>
+            <legend>This is a smiple form &commat; &copy; </legend>
+
+            <form action="" method="" enctype="multipart/form-data">
+                <!-- firstname text -->
+                <label for="firstname">First Name
+                    <input type="text" name="firstname" id="firstname" class="" autocomplete="off" placeholder="Enter your first name" minlength="3" maxlength="5" required autofocus>
+                </label>
+    
+                <br><br>
+    
+                <!-- lastname text -->
+                <label for="lastname">Last Name
+                    <input type="text" name="lastname" id="lastname" class="" autocomplete="off" placeholder="Enter your second name" minlength="3" maxlength="5" required>
+                </label>
+    
+                <br><br>
+    
+                <!-- type=number -->
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" class="" placeholder="Enter your age" min="3" max="99" required>
+    
+                <br><br>
+    
+                <!-- email text -->
+                <label for="email">Email
+                    <input type="email" name="email" id="email" class="" autocomplete="off" placeholder="Enter your email" required>
+                </label>
+    
+                <br><br>
+    
+                <!-- password -->
+                <label for="password">Password
+                    <input type="password" name="password" id="password" class="" placeholder="Enter your password" required>
+                </label>
+    
+                <br><br>
+    
+                <!-- gender radio -->
+                <label for="">Gender
+                    <input type="radio" name="gender" id="gendermale" class="" value="male" checked>
+                    <label for="gendermale">Male</label>
+                    <input type="radio" name="gender" id="genderfemale" class="" value="female">
+                    <label for="genderfemale">Female</label>
+                    <input type="radio" name="gender" id="genderother" class="" value="other">
+                    <label for="genderother">Other</label>
+                </label>
+    
+                <br><br>
+    
+                <!-- fruits radio -->
+                <label for="">Fruits
+                    <input type="radio" name="fruits" id="apple" class="" value="apple">
+                    <label for="apple">Apple</label>
+                    <input type="radio" name="fruits" id="orange" class="" value="orange" checked>
+                    <label for="orange">Orange</label>
+                    <input type="radio" name="fruits" id="pineapple" class="" value="pineapple">
+                    <label for="pineapple">Pineapple</label>
+                </label>
+    
+                <br><br>
+    
+                <!-- fav color checkbox -->
+                <label for="">Choose your fav color
+                    <input type="checkbox" name="favcol" id="red" value="red" checked>
+                    <label for="red">Red</label>
+                    <input type="checkbox" name="favcol" id="green" value="green" checked>
+                    <label for="green">Green</label>
+                    <input type="checkbox" name="favcol" id="blue" value="blue">
+                    <label for="blue">Blue</label>
+                    <input type="checkbox" name="favcol" id="yellow" value="yellow" checked>
+                    <label for="yellow">Yellow</label>
+                </label>
+    
+                <br><br>
+    
+                <!-- dropdown -->
+                <label for="herorole">Hero Role</label>
+                <select name="herorole" id="herorole" class="">
+                    <option selected disabled>Choose your role</option>
+                    <option value="mid">Mid</option>
+                    <option value="mm">Masksman</option>
+                    <option value="sup">Support</option>
+                    <option value="bar">Baron</option>
+                    <option value="jg">Jungle</option>
+                </select>
+    
+                <br><br>
+    
+                <label for="footballteam">Football team</label>
+                <select name="footballteam" id="footballteam" multiple>
+                    <option value="mu">Manchester United</option>
+                    <option value="mc">Manchester City</option>
+                    <option value="lvp">Liverpool</option>
+                    <option value="chl">Chealsea</option>
+                    <option value="asn">Arsenal</option>
+                </select>
+    
+                <br><br>
+    
+                <!-- type= date -->
+    
+                <label for="dob">Date Of Birth</label>
+                <input type="date" name="dob" id="dob" class="">
+    
+                <br><br>
+    
+                <!-- type=time -->
+                <label for="bookingtime">Booking Time</label>
+                <input type="time" name="bookingtime" id="bookingtime" class="" disabled>
+    
+                <br><br>
+    
+                <!-- datetime-local -->
+                <label for="apt">Appoint</label>
+                <input type="datetime-local" name="apt" id="apt" class="" readonly>
+    
+                <br><br>
+    
+                <!-- range -->
+                <label for="vol">Volume</label>
+                <input type="range" name="vol" id="vol" class="" value="0" min="0" max="100" step="20">
+    
+                <br><br>
+    
+                <!-- textarea -->
+                <label for="bio">Biography</label>
+                <textarea name="bio" id="bio" class="" cols="" rows="10" placeholder="Write Something ....."></textarea>
+    
+                <br><br>
+    
+                <!-- file -->
+                <label for="nrc">NRC</label>
+                <input type="file" name="nrc" id="nrc" class="" capture="user" accept="image/*" multiple>
+    
+                <br><br>
+    
+                <!-- hidden -->
+                <input type="hidden" name="hidden" id="hidden" class="" value="">
+    
+                <br><br>
+    
+                <!-- button type=reset & type=submmit -->
+                <input type="reset" name="reset" id="reset" class="" value="Cancel" disabled>
+                <input type="submit" name="login" id="login" class="" value="Login">
+                <button type="submit" name="register" id="register" class="" disabled>Register</button>
+    
+            </form>
+        </fieldset>
+        
+    </body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my pratice js</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    // const let var
+
+    // const name = "Maung Maung"; // Maung Maung
+    //     // name = "Aung Aung"; // error
+    // const name = "Kyaw Kyaw"; // error
+    // console.log(name);
+
+    // let name = "Maung Maung"; // Maung Maung
+    //     name = "Aung Aung"; // Aung  Aung
+    // let name = "Kyaw Kyaw"; // error
+    // console.log(name);
+
+    var name = "Maung Maung"; // Maung Maung
+        name = "Aung Aung"; // Aung Aung
+    var name = "Kyaw Kyaw"; // Kyaw Kyaw
+    console.log(name);
+
+    let numberone = 10;
+    var numbertwo = 20;
+    const numberthree = 30;
+
+    numberone = 20;
+    numbertwo = 30;
+    // numberthree = 40; // error
+
+    console.log("number val: " + numberone,numbertwo,numberthree); // 20 30 30
+
+    // overwrite
+    let valone = 1;
+    var valtwo = 2;
+    const valthree = 3;
+
+    function funone(){
+        valone = 10;
+        valtwo = 20;
+        // valthree = 30 // error because of const
+
+        console.log("global scope/inside value: " + valone,valtwo,valthree); // 10 20 3
+    }
+
+    funone();
+
+    console.log("global scope/outside value: " + valone,valtwo,valthree); // 10 20 3
+
+    // declare
+
+    let valfour = 4;
+    var valfive = 5;
+    const valsix = 6;
+
+    let funtwo = function () {
+        let valfour = 40;
+        var valfive = 50;
+        const valsix = 60;
+
+        console.log(`global scope/inside value: ${valfour},${valfive},${valsix}`); // 40 50 60
+
+        let valseven = 70;
+        var valeight = 80;
+        const valnine = 90;
+
+        console.log(`global scope/inside val: ${valseven},${valeight},${valnine}`); // 70 80 90
+    }
+
+    funtwo();
+
+    console.log(`global scope/outside value: ${valfour},${valfive} and ${valsix}`); // 4 5 6
+    // console.log(`global scope/outside val: ${valnine}`); // valseven, valeight and valnine is not defined
+
+    // statement (overwrite)
+
+    let x = 1;
+    var y = 2;
+    const z = 3;
+
+    if (true){
+        x = 10;
+        y = 20;
+        // z = 30; // error because of const
+
+        console.log(`statement global variable/inside val: ${x},${y},${z}`); // 10 20 3
+    }
+
+    console.log(`statement global variable/outside val: ${x},${y},${z}`); // 10 20 3
+
+    // statement (declare)
+    let a = 1;
+    var b = 2;
+    const c = 3;
+
+    if (true){
+        let a = 10;
+        var b = 20;
+        const c = 30;
+
+        console.log(`statement global variable/inside val: ${a},${b} and ${c}`); // 10 20 30
+
+        let d = 100;
+        var e = 200;
+        const f = 300;
+
+        console.log(`statement global variable/inside val: ${d},${e} and ${f}`); // 100 200 300
+    }
+
+    console.log(`statement global variable/outside val: ${a},${b} and ${c}`); // 1 20 3
+    console.log(`statement global variable/outside val: ${e}`); // 200
+
+    // looping in local scope
+
+    for (let mynumber = 0; mynumber < 5; mynumber++){
+        console.log("looping let global scope/inside val: " + mynumber); // 0 to 4
+    }
+
+    // console.log("looping global scope/outside val: " + mynumber); // mynumber is not defined
+
+    for (var mynumber = 0; mynumber <= 5; mynumber++){
+        console.log("looping var global scope/inside val: " + mynumber); // 0 to 5
+    }
+
+    console.log("looping var global scope/outside val: " + mynumber); // 6
+
+    // for (const mynumber = 0; mynumber <= 5; mynumber++){
+    //     console.log("looping var global scope/inside val: " + mynumber);
+    // }
+    //
+    // console.log("looping var global scope/outside val: " + mynumber); // const cannot overwrite so cannot loop
+
+    // overwrite
+    let numone = 0;
+    var numtwo = 0;
+    const numthree = 0;
+
+    for (numone; numone < 5; numone++){
+        console.log("global scope inside value: ", numone);
+    }
+
+    console.log("global scope outside value: ", numone,numtwo,numthree); // 5 0 0
+
+    for (numtwo; numtwo < 5; numtwo++){
+        console.log(`global scope inside value: ${numtwo}`);
+    }
+
+    console.log("global scope outside value: ", numone,numtwo,numthree); // 5 5 0
+
+    // for (numthree; numthree < 5; numthree++){
+    //     console.log(`global scope inside value: ${numthree}`); // error because of const
+    // }
+
+    // declare
+    let numfour = 2;
+    var numfive = 3;
+    const numsix = 4;
+
+    for (numfour = 0; numfour < 5; numfour++){
+        console.log(`global scope inside val: ${numfour}`);
+    }
+
+    console.log("global scope outside val: ",numfour,numfive,numsix); // 5 3 4
+
+    for (numfive = 0; numfive < 5; numfive++){
+        console.log(`global scope inside value: ${numfive}`);
+    }
+
+    console.log("global scope outside val: ",numfour,numfive,numsix); // 5 5 4
+
+    // for (numsix = 0; numsix < 5; numsix++){
+    //     console.log(`global scope inside value: ${numsix}`); // error because of const
+    // }
+
+    // Objects
+    let aboutmystudent = {
+        name : "Maung Maung",
+        age : 22,
+        hometown : "Yangon"
+    }
+    console.log(aboutmystudent);
+
+    // key overwrite
+    aboutmystudent.age = 25;
+    console.log(aboutmystudent.age, aboutmystudent);
+
+    // key create
+    aboutmystudent.education = "Grade 11";
+    console.log(aboutmystudent.education, aboutmystudent);
+
+    // objects renew / overwrite
+    aboutmystudent = {
+        hobby : "football"
+    }
+    console.log(aboutmystudent);
+
+    // objects declare
+    // let aboutmystudent = {
+    //     name : "Aung Aung"
+    // }
+    //
+    // console.log(aboutmystudent); // error because let is already declared
+
+    var aboutme = {
+        name : "Mr.Thant",
+        age : 23,
+        hometown: "Yangon"
+    }
+
+    console.log(aboutme);
+
+    // key create
+    aboutme.education = "5th year of BE";
+    console.log(aboutme.education, aboutme);
+
+    // key overwrite
+    aboutme.hometown = "Mandalay";
+    console.log(aboutme.hometown,aboutme);
+
+    // objects overwrite / renew
+    aboutme= {
+        name: "Mrs.Thant"
+    }
+
+    console.log(aboutme.name,aboutme);
+
+    // objects declare
+    var aboutme = {
+        name : "Mr.James Bond Thant"
+    }
+    console.log(aboutme);
+
+    const studentlist = {
+        studentone : "Maung Maung",
+        studenttwo : "Aung Aung",
+        studentthree : "Hla Hla"
+    }
+
+    console.log(studentlist);
+
+    // key create
+    studentlist.studentfour = "Mya Mya";
+    console.log(studentlist.studentfour, studentlist);
+
+    // key overwrite
+    studentlist.studentone = "Ko Ko";
+    console.log(studentlist.studentone, studentlist);
+
+    // objects overwrite / renew
+    // studentlist = {
+    //     studnetfive : "Sai Sai"
+    // }
+    //
+    // console.log(studentlist); // error because of const
+
+    // objects declare
+    // const studentlist = {
+    //     studentone : "Ko Ko"
+    // }
+    //
+    // console.log(studentlist); // error because const is already declared
+
+    // array
+
+    let girllists = ["Su Su","Yu Yu","Hla Hla"];
+    console.log(girllists, Array.isArray(girllists));
+
+    // array value overwrite
+    girllists[0] = "Mu Mu";
+    console.log(girllists[0], girllists);
+
+    // array value add
+    girllists[3] = "Mya Mya";
+    console.log(girllists[3], girllists);
+
+    // array value add with push method
+    girllists.push("Khaing");
+    console.log(girllists);
+
+    // array overwrite
+    girllists = ["Yu Yu","Thaw Thaw","Hnin Hnin"];
+    console.log(girllists);
+
+    // array declare
+    // let girllists = ["Mya Mya","Hla Hla","Pa Pa"]; // error because let is already declared
+    // console.log(girllists);
+
+    var boylists = ["Maung Maung","Aung Aung","Kyaw Kyaw"];
+    console.log(boylists);
+
+    // array value overwrite
+    boylists[1] = "Ko Ko Maung";
+    console.log(boylists[1], boylists);
+
+    // array value add
+    boylists[4] = "Ba Ba";
+    console.log(boylists[4], boylists);
+
+    // array value add with push method
+    boylists.push("Aung Kaung Myat");
+    console.log(boylists);
+
+    // array overwrite
+    boylists = ["Aung Aung","kyaw kyaw","Maung Maung"];
+    console.log(boylists);
+
+    // array declare
+    var boylists = ["Kyaw Kyaw","Aung Aung","Naung Naung"];
+    console.log(boylists);
+
+    const catnames = ["Kit Kit","Gu Gu","Gar Gar"];
+    console.log(catnames);
+
+    // array value overwrite
+    catnames[2] = "Milky";
+    console.log(catnames[2], catnames);
+
+    // array value add
+    catnames[3] = "Kay Kay";
+    console.log(catnames[3], catnames);
+
+    // array value add with push method
+    catnames.push("Chi Chi");
+    console.log(catnames);
+
+    // array overwrite
+    // catnames = ["Koe Koe","Phoe Thingangyun","Aril"]; // error because of canst
+    // console.log(catnames);
+
+    // array declare
+    // const catnames = ["Pu tin","Shwe War","Li Li"]; // error because const is already declared
+    // console.log(catnames);
+
+
+
+</script>
+
+</body>
+</html>

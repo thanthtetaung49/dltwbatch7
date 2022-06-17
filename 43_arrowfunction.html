@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    // Regular Function
+
+    let regfun1 = function() {
+        let num1 = 60;
+        return num1;
+    }
+
+    console.log('this is regufun1 = ' + regfun1());
+
+    // Arrow function
+
+    // method 1
+    let arrfun1 = ()=>{
+        let num1 = 200;
+        return num1;
+    }
+
+    console.log('this is arrfun1 = ' + arrfun1());
+
+    // method 2
+    let arrfun2 = (number)=>{
+        return number;
+    }
+
+    console.log('this is arrfun2 = ' + arrfun2(300));
+
+    // (just for single parameter)
+    let arrfun3 = number => {
+        return number;
+    }
+
+    console.log(`this is arrfun3 = ${arrfun3(500)}`);
+
+    // method 3
+
+    // (just for single parameter)
+    let arrfun4 = number => number + 300;
+
+    console.log('this is arrfun4 = ' + arrfun4(200));
+
+    let arrfun5 = () => 'i am fun5';
+
+    console.log(arrfun5());
+
+    // multi parameter
+    let arrfun6 = (num1=1,num2=2) => {
+        let result = num1 + num2;
+        return result;
+ 
+    }
+
+    console.log("result is " + arrfun6(20,30)); // 50
+    console.log(`result is ${arrfun6()}`) // 3
+    console.log(`result is ${arrfun6(10,20,30)}`);
+
+</script>
+
+</body>
+</html>

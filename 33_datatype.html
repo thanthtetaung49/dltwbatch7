@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Type</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    // string
+    const name = 'kyaw kyaw';
+
+    console.log(typeof name); // keyword syntex
+    console.log(typeof(name)); // function syntex
+    console.warn(typeof name); // warn is warning sign
+    console.error(typeof name); // error is error sign
+
+
+    // number
+    const number = 11;
+
+    console.log(typeof number);
+
+    // boolean
+
+    const hascar = true;
+    console.warn(typeof hascar);
+    const nocar = false;
+    console.error(typeof nocar);
+
+    // undefined
+
+    var test;
+
+    console.log(typeof test);
+
+    // NULL, no value -> (objcet)
+
+    let novalue = null;
+
+    console.log(typeof novalue);
+
+    // empty -> (string data type)
+    let home = "";
+    console.log(home);
+    console.log(typeof home);
+
+    // date -> object
+    let date = new Date();
+    console.log(date);
+    console.log(typeof date);
+
+    // javascript object -> object
+    const address = {
+        no : 'NO. 155(4A)',
+        street : 'Pyi Daw Aye Street',
+        township : 'Thingangyun townships',
+        city : 'Yangon',
+        country : 'Myanmar'
+    }
+
+    console.log(address);
+    console.log(typeof address);
+
+    // array -> object
+    const array = ['mg mg','aung aung','hla hla'];
+    console.log(array);
+    console.log(typeof array);
+
+</script>
+
+</body>
+</html>
